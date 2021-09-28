@@ -1,0 +1,1 @@
+2 errors stemming from adding variables that were not the same type, probably from using too much python.
