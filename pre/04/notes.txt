@@ -1,0 +1,1 @@
+3 errors due to an extensive misunderstanding in syntax that was resolved after consulting Stack Overflow, but the idea is straightforward.
