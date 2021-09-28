@@ -1,0 +1,1 @@
+Many issues - only section that took over an hour. The recursion used an old model I made in python/racket that I thought could be adpated but did not work causing 50 minutes of trouble shooting before starting over.
