@@ -1,2 +1,3 @@
-"Hello World"
+#lang scheme
 
+"Hello, World!"
