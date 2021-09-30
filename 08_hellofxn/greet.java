@@ -10,6 +10,5 @@ public class greet {
 	public static void main(String[] args) {
 		greet("My My, what a surprise");
 		System.out.println();
-		greet();
 	}
 }
