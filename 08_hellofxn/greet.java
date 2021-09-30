@@ -9,9 +9,7 @@ public class Greet {
 	}
 	public static void main(String[] args) {
 		greet("My My, what a surprise");
-
 		System.out.println();
-
-		alternateGreet();
+		Greet();
 	}
 }
