@@ -1,8 +1,12 @@
-public class greet {
-	public static void main(String[] args) {
-		System.out.println("No hablo queso");
+public class Greet {
+	static void greet(String s) {
+		System.out.println(s);
 	}
-	public static greet(String) {
-		return "Why hello there, what is happening?";
+	public static void main(String[] args) {
+		greet("My My, what a surprise");
+
+		System.out.println();
+
+		alternateGreet();
 	}
 }
