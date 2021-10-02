@@ -4,6 +4,6 @@ Additionally, I discovered the importance of syntax after getting many different
 
 public class BigSib {
 	static void greet(String s) {
-		System.out.println("My My " + s ", what a surprise.");
+		System.out.println("My My " + s + ", what a surprise.");
 	}
 }
