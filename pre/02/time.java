@@ -1,4 +1,4 @@
-Public Class Time {
+public class Time {
   public static void main(String[] args) {
     int seconds = 30;
     int minutes = 48;
