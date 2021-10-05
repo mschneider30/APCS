@@ -3,6 +3,6 @@
 
 public class BigSib {
 	static String greet(String s) {
-		return ("My My " + s + ", what a surprise.");
+		return ("HelloMsg" + "greeting");
 	}
 }
