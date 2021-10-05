@@ -1,6 +1,10 @@
 public class BigSib {
-	static String greet(String s) {
-		greeting=HelloMsg+greeting;
-			return greeting;
+	String HelloMsg;
+	public void setHelloMsg(String s){
+		HelloMsg=s;
+		system.out.println(HelloMsg + ' ');
+	}
+	static String greet(String ss) {
+		return ss;
 	}
 }
