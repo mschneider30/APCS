@@ -5,6 +5,12 @@ HW 12 -- On Elder Individuality And the Elimination of Radio Fuzz/BigSib.java/ch
 2021 10 06
 */
 
+/*
+Disco: I discovered how to use a class as a blueprint for multiple instances. 
+QCC: I am not sure how my code is putting together each line.
+*/
+
+
 public class Greet {
 	public static void main( String[] args ) {
     		String greeting;
