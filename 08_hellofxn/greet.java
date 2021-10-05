@@ -1,3 +1,10 @@
+/*
+Max Schneider
+APCS
+HW 8 -- Refractor Freshie Zero/personalized Greet.java file
+2021 10 01
+*/
+
 /* 
 Thusly:
 void greet(string) goes not work. You need static to void greet. TYou also need to specify variable types.
