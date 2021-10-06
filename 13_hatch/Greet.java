@@ -1,13 +1,13 @@
 /*
-Max Schneider
+DM Sliders - Max, StillDavid
 APCS
 HW 12 -- Where do BigSibs Come From?/BigSib.java/changed Greet.java file
 2021 10 07
 */
 
 /*
-Disco: I discovered how to use a class as a blueprint for multiple instances. 
-QCC: I am not sure how my code is putting together each line.
+Disco: I discovered how to use a constructor. This led to many problems stemming from not knowing how to take the print statement out of the setHelloMsg method. However, I figured it out by creating a seperate method and returning the full sentence there. 
+QCC: I don't know how to to use setHelloMsg without an if statement.
 */
 
 
