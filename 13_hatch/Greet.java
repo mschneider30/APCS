@@ -1,8 +1,8 @@
 /*
 Max Schneider
 APCS
-HW 12 -- On Elder Individuality And the Elimination of Radio Fuzz/BigSib.java/changed Greet.java file
-2021 10 06
+HW 12 -- Where do BigSibs Come From?/BigSib.java/changed Greet.java file
+2021 10 07
 */
 
 /*
@@ -16,7 +16,6 @@ public class Greet {
     		String greeting;
 
    		BigSib richard = new BigSib();
-/*    		richard.setHelloMsg("Word up");*/
 
     		greeting = richard.greet("freshman");
     		System.out.println(greeting);
