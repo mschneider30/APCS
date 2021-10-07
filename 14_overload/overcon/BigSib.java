@@ -1,5 +1,16 @@
 public class BigSib {
 	String HelloMsg;
+	public richard(){
+		HelloMsg = "Word up";
+	public grizz(){
+		HelloMsg = "Hey ya";
+	public doCom(){
+		HelloMsg = "Sup";
+	public tracy(){
+		HelloMsg = "Salutations";
+	public BigSib(){
+		HelloMsg = "No way its you!";
+	/*
 	public BigSib(){
 		
 		if (BigSib == richard){
@@ -17,7 +28,8 @@ public class BigSib {
 		else {
 			HelloMsg= "No way, its you!";
 		}
-}
+	}
+	*/
 	String greet(String ss) {
 		ss=(HelloMsg+' '+ss);
 		return ss;
