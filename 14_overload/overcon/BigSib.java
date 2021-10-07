@@ -1,13 +1,12 @@
 public class BigSib {
 	String HelloMsg;
+	String Person;
 	public BigSib (){
-		HelloMsg = "Word up";
+		Person richard = "freshman" ;
+		Person grizz = "Dr. Spaceman" ;
+		Person dotCom = "Kong Fooey" ;
+		Person tracy = "mom" ;
 }
-	public void setHelloMsg(String s){
-		if (HelloMsg == "Word up"){
-			HelloMsg=s;
-		}
-	}
 	String greet(String ss) {
 		ss=(HelloMsg+' '+ss);
 		return ss;
