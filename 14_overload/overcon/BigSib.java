@@ -1,7 +1,7 @@
 public class BigSib {
 	String HelloMsg;
 	if (BigSib == richard){
-		HelloMsg = "Word up;
+		HelloMsg = "Word up";
 	}
 	else if (BigSib == grizz){
 		HelloMsg = "Hey ya";
