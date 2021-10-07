@@ -1,18 +1,18 @@
 public class BigSib {
 	String HelloMsg;
-	public richard(){
+	public  void richard(){
 		HelloMsg = "Word up";
 	}
-	public grizz(){
+	public  void grizz(){
 		HelloMsg = "Hey ya";
 	}
-	public doCom(){
+	public  void dotCom(){
 		HelloMsg = "Sup";
 	}
-	public tracy(){
+	public void tracy(){
 		HelloMsg = "Salutations";
 	}
-	public BigSib(){
+	public void BigSib(){
 		HelloMsg = "No way its you!";
 	}
 	/*
