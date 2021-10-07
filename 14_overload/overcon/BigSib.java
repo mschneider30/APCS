@@ -2,14 +2,19 @@ public class BigSib {
 	String HelloMsg;
 	public richard(){
 		HelloMsg = "Word up";
+	}
 	public grizz(){
 		HelloMsg = "Hey ya";
+	}
 	public doCom(){
 		HelloMsg = "Sup";
+	}
 	public tracy(){
 		HelloMsg = "Salutations";
+	}
 	public BigSib(){
 		HelloMsg = "No way its you!";
+	}
 	/*
 	public BigSib(){
 		
