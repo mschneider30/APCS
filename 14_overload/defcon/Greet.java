@@ -6,8 +6,8 @@ HW 14 -- Customize Your Creation/BigSib.java/changed BigSib.java file
 */
 
 /*
-Disco: I discovered how to use a constructor. This led to many problems stemming from not knowing how to take the print statement out of the setHelloMsg method. However, I figured it out by creating a seperate method and returning the full sentence there. 
-QCC: I don't know how to to use setHelloMsg without an if statement.
+Disco: I discovered how to use a constructor with and without inputs. I also discovered 20+ ways not to use constructors from unsuccessfully trying to diversify the messages in overcon.
+QCC: How do you invoke the name of an object?
 */
 
 
