@@ -1,15 +1,15 @@
 public class BigSib {
 	String HelloMsg;
-	public  void BigSib Richard(){
+	public  void BigSib.Richard(){
 		HelloMsg = "Word up";
 	}
-	public  void BigSib Grizz(){
+	public  void BigSib.Grizz(){
 		HelloMsg = "Hey ya";
 	}
-	public  void BigSib dotCom(){
+	public  void BigSib.dotCom(){
 		HelloMsg = "Sup";
 	}
-	public void BigSib Tracy(){
+	public void BigSib.Tracy(){
 		HelloMsg = "Salutations";
 	}
 	public BigSib(){
