@@ -21,7 +21,7 @@ public class BankAccount {
 		balance = balance - h;
 	}
 	public void actInfo (){
-		System.out.println("Account Name: "fullName + " Password: "+ password + " Pin: " + pin + " Account Number: " + accountNumber + " Balance: " + balance);
+		System.out.println("Account Name: " + fullName + " Password: "+ password + " Pin: " + pin + " Account Number: " + accountNumber + " Balance: " + balance);
 	}
 	public static void main(String[] args){
 		BankAccount Test = new BankAccount();
