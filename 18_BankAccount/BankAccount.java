@@ -20,10 +20,10 @@ public class BankAccount {
 	public void deposit(float h) {
 		balance = balance - h;
 	}
-	public void actInfo (String[] args){
+	public void actInfo (){
 		System.out.println(fullName + password + pin + accountNumber + balance);
 	}
-	public void main(){
+	public void main(String[] args){
 		BankAccount Test = new BankAccount();
 		Test.setValues("Test Account", "StrongPassword", 1234, 012345, 1000);
 		Test.withdraw(100);
