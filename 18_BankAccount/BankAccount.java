@@ -3,10 +3,10 @@ public class BankAccount {
 	private String fullName;
 	private String password;
 	private int pin;
-	private int accountNumber;
+	private long accountNumber;
 	private float balance;
 	
-	public void setValues(String S, String T, int a, int b, float f){
+	public void setValues(String S, String T, int a, long b, float f){
 		fullName = S;
 		password = T;
 		pin = a;
@@ -23,7 +23,7 @@ public class BankAccount {
 	public void actInfo (String[] args){
 		System.out.println(fullName + password + pin + accountNumber + balance);
 	}
-	public void main(String S0, String T0, int a0, int b0, float f0){
+	public void main(String[] args){
 		BankAccount Test = new BankAccount();
 		Test.setValues("Test Account", "StrongPassword", 1234, 0123456789, 1000);
 		Test.withdraw(100);
