@@ -28,6 +28,6 @@ public class BankAccount {
 		Test.setValues("Test Account", "StrongPassword", 1234, 012345, 1000);
 		Test.withdraw(100);
 		Test.deposit(200);
-		Test.actInfo("");
+		Test.actInfo();
 	}
 }
