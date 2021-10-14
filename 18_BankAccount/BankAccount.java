@@ -1,16 +1,11 @@
 public class BankAccount {
 	
-	String fullName;
-	String password;
-	int pin;
-	int accountNumber;
-	float balance;
-	public BankAccount(String S, String T, int a, int b, float f);
-		fullName = S;
-		password = T;
-		pin = a;
-		accountNumber = b;
-		balance = f;
+	private String fullName;
+	private String password;
+	private int pin;
+	private int accountNumber;
+	private float balance;
+	
 	public void setValues(String S, String T, int a, int b, float f){
 		fullName = S;
 		password = T;
@@ -29,9 +24,10 @@ public class BankAccount {
 		System.out.println(fullName + password + pin + accountNumber + balance);
 	}
 	public void main(String S0, String T0, int a0, int b0, float f0){
-		setValues(S0, T0, a0, b0, f0);
-		withdraw(100);
-		deposit(200);
-		actInfo("");
+		BankAccount Test = new BankAccount();
+		Test.setValues("Test Account", "StrongPassword", 1234, 0123456789, 1000);
+		Test.withdraw(100);
+		Test.deposit(200);
+		TestactInfo("");
 	}
 }
