@@ -23,7 +23,7 @@ public class BankAccount {
 	public void actInfo (String[] args){
 		System.out.println(fullName + password + pin + accountNumber + balance);
 	}
-	public void main(String[] args){
+	public void main(){
 		BankAccount Test = new BankAccount();
 		Test.setValues("Test Account", "StrongPassword", 1234, 012345, 1000);
 		Test.withdraw(100);
