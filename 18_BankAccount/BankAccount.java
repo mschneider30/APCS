@@ -25,7 +25,7 @@ public class BankAccount {
 	}
 	public static void main(String[] args){
 		BankAccount Test = new BankAccount();
-		Test.setValues("Test Account", "StrongPassword", 123456789, 012345, 1000);
+		Test.setValues("Test Account", "StrongPassword", 123456789, 000, 1000);
 		Test.withdraw(100);
 		Test.deposit(200);
 		Test.actInfo();
