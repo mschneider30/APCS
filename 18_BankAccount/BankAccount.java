@@ -17,7 +17,7 @@ public class BankAccount {
 	public void withdraw(float g){
 		balance = balance - g;
 	}
-	public void deposit(float h, int bb) {
+	public void deposit(float h) {
 		balance = balance - h;
 	}
 	public void actInfo (String[] args){
@@ -28,6 +28,6 @@ public class BankAccount {
 		Test.setValues("Test Account", "StrongPassword", 1234, 012345, 1000);
 		Test.withdraw(100);
 		Test.deposit(200);
-		TestactInfo("");
+		Test.actInfo("");
 	}
 }
