@@ -1,3 +1,15 @@
+/* 
+Swag Trio - Max Schneider, Jason Yang, Michael Kamela
+DISCO:
+You don't actually need a constructor. The default one is very effective
+Variables should be private to ensure they don't accidently get changed in aanother instance
+QCC:
+Why is int randomly changing big numbers?
+Q2: It must exist because we can call a new BankAccount without a constructor.
+Q3: You could try calling the integer name, or run BankAccount(specific instance).greet(), when greet is a method that returns BankAccount.
+*/
+
+
 public class BankAccount {
 	
 	private String fullName;
