@@ -1,11 +1,13 @@
 /**
-   Max Schneider
+   Swag trio: Max Schneider, Jason Yang, Michael Kamela
    APCS pd7
    HW18 -- building a more meaningful class
    2021-10-18
 Disco:
-
-QCC:
+I discovered the importance of syntax in conditionals. Struggled mightily before realizing that and was not valid but && is. Additionally, I discovered how useful it is to label outputs with print statements to clarify the info.
+QCC: 
+It is possible to only allow edits after authenticate has been ran?
+Why do you need to (short) when you assign a pin?
 **/
 
 public class BankAccount {
