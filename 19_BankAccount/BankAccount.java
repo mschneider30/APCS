@@ -34,24 +34,22 @@ public class BankAccount {
 
   public short setPin( short newPin ) {
     short oldPin = pin;
-    if (newPin >= 1000 and newPin <= 9998) {
+    if ((newPin >= 1000) && (newPin <= 9998)) {
 	    pin =newPin; 
-    }
-    else {
+	 } else {
 	    pin = 9999;
-	    system.out.println("Invalid Pin: Pin must be between 1000 and 9998");
+	    System.out.println("Invalid Pin: Pin must be between 1000 and 9998");
     }
     return oldPin;
   }
 
   public int setAcctNum( int newAcctNum ) {
     int oldAcctNum = acctNum;
-    if (newAcctNum >= 100000000 and newAcctNum <= 999999998) {
+    if ((newAcctNum >= 100000000) && (newAcctNum <= 999999998)) {
 	  acctNum = newAcctNum;
-    }
-    else {
+	}else {
 	    acctNum=999999999;
-	    system.out.println("Invalid Account Number - Account Number must be between 100000000 and 999999998");
+	    System.out.println("Invalid Account Number - Account Number must be between 100000000 and 999999998");
     }
     return oldAcctNum;
   }
@@ -69,21 +67,22 @@ public class BankAccount {
   }
 
   public void withdraw( double withdrawAmount ) {
-    if (balance - withdraw >= 0) {
+    if (balance - withdrawAmount >= 0) {
 	    balance = balance - withdrawAmount;
     }
     else {
-	    system.out.println("You do not have enough money to make this withdrawal");
+	    System.out.println("You do not have enough money to make this withdrawal");
     }
   }
 
-  public boolean authenticate(int number, String pass):
-	if passwd == pass and AcctNum=number) {
+  public boolean authenticate(int number, String pass){
+	if ((passwd == pass) && (acctNum==number)) {
 		return true;
 	}
 	else {
 		return false;
 	}
+}
   //overwritten toString()
   public String toString() {
     String retStr = "\nAccount info:\n=======================";
@@ -100,13 +99,12 @@ public class BankAccount {
   //main method for testing
   public static void main( String[] args ) {
     BankAccount ba = new BankAccount();
-	  BankAccount ba = new BankAccount();
 
 	ba.setName("Test Account");
 
 	ba.setPasswd("StrongPassword");
 
-	ba.setPin(0000);
+	ba.setPin((short)0000);
 
 	ba.setAcctNum(123456789);
 
@@ -116,20 +114,20 @@ public class BankAccount {
 
 	ba.deposit(200);
 	  
-	system.out.println("Functional Responses: ");
+	System.out.println("Functional Responses: ");
 
-	system.out.println(ba.toString());
+	System.out.println(ba.toString());
 
-	system.out.println("Should say: 'Account Name:  Test Account, Password: StrongPassword, Pin: 0000, Account Number: 123456789, Balance: 1100.0'");
+	System.out.println("Should say: 'Account Name:  Test Account, Password: StrongPassword, Pin: 0000, Account Number: 123456789, Balance: 1100.0'");
 	
-	system.out.println("Error Messages:");
+	System.out.println("Error Messages:");
 	
 	ba.setAcctNum(4);
-	ba.setPin(4);
+	ba.setPin((short)4);
 	ba.withdraw(1000000);
-	system.out.println(ba.authenticate(123456789, "WeakPassword"));
-	system.out.println(ba.authenticate(4, "StrongPassword"));
-	system.out.println("Should give 3 unique error messages and then two false values");
+	System.out.println(ba.authenticate(123456789, "WeakPassword"));
+	System.out.println(ba.authenticate(4, "StrongPassword"));
+	System.out.println("Should give 3 unique error messages and then two false values");
   }//end main()
 
 }//end class BankAccount
