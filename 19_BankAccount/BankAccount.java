@@ -1,45 +1,135 @@
-/* 
-Swag Trio - Max Schneider, Jason Yang, Michael Kamela
-DISCO:
-You don't actually need a constructor. The default one is very effective
-Variables should be private to ensure they don't accidently get changed in aanother instance
-QCC:
-Why is int randomly changing big numbers?
-Q2: It must exist because we can call a new BankAccount without a constructor.
-Q3: You could try calling the integer name, or run BankAccount(specific instance).greet(), when greet is a method that returns BankAccount.
-*/
+/**
+   Max Schneider
+   APCS pd7
+   HW18 -- building a more meaningful class
+   2021-10-18
+Disco:
 
+QCC:
+**/
 
 public class BankAccount {
-	
-	private String fullName;
-	private String password;
-	private int pin;
-	private int accountNumber;
-	private float balance;
-	
-	public void setValues(String S, String T, int a, int b, float f){
-		fullName = S;
-		password = T;
-		pin = a;
-		accountNumber = b;
-		balance = f; 
-	}
 
-	public void withdraw(float g){
-		balance = balance - g;
+  //instance variables
+  private String name;
+  private String passwd;
+  private short pin;
+  private int acctNum;
+  private double balance;
+  //---------------------------------------------
+
+
+  //mutators
+  public String setName( String newName ) {
+    String oldName = name;
+    name = newName;
+    return oldName;
+  }
+
+  public String setPasswd( String newPasswd ) {
+    String oldPasswd = passwd;
+    passwd = newPasswd;
+    return oldPasswd;
+  }
+
+  public short setPin( short newPin ) {
+    short oldPin = pin;
+    if (newPin >= 1000 and newPin <= 9998) {
+	    pin =newPin; 
+    }
+    else {
+	    pin = 9999;
+	    system.out.println("Invalid Pin: Pin must be between 1000 and 9998");
+    }
+    return oldPin;
+  }
+
+  public int setAcctNum( int newAcctNum ) {
+    int oldAcctNum = acctNum;
+    if (newAcctNum >= 100000000 and newAcctNum <= 999999998) {
+	  acctNum = newAcctNum;
+    }
+    else {
+	    acctNum=999999999;
+	    system.out.println("Invalid Account Number - Account Number must be between 100000000 and 999999998");
+    }
+    return oldAcctNum;
+  }
+
+  public double setBalance( double newBalance ) {
+    double oldBalance = balance;
+    balance = newBalance;
+    return oldBalance;
+  }
+  //---------------------------------------------
+
+
+  public void deposit( double depositAmount ) {
+    balance = balance + depositAmount;
+  }
+
+  public void withdraw( double withdrawAmount ) {
+    if (balance - withdraw >= 0) {
+	    balance = balance - withdrawAmount;
+    }
+    else {
+	    system.out.println("You do not have enough money to make this withdrawal");
+    }
+  }
+
+  public boolean authenticate(int number, String pass):
+	if passwd == pass and AcctNum=number) {
+		return true;
 	}
-	public void deposit(float h) {
-		balance = balance + h;
+	else {
+		return false;
 	}
-	public void actInfo (){
-		System.out.println("Account Name: " + fullName + " Password: "+ password + " Pin: " + pin + " Account Number: " + accountNumber + " Balance: " + balance);
-	}
-	public static void main(String[] args){
-		BankAccount Test = new BankAccount();
-		Test.setValues("Test Account", "StrongPassword", 123456789, 000, 1000);
-		Test.withdraw(100);
-		Test.deposit(200);
-		Test.actInfo();
-	}
-}
+  //overwritten toString()
+  public String toString() {
+    String retStr = "\nAccount info:\n=======================";
+    retStr = retStr + "\nName: " + name;
+    retStr = retStr + "\nPassword: " + passwd;
+    retStr = retStr + "\nPIN: " + pin;
+    retStr = retStr + "\nAccount Number: " + acctNum;
+    retStr = retStr + "\nBalance: " + balance;
+    retStr = retStr + "\n=======================";
+    return retStr;
+  }
+
+
+  //main method for testing
+  public static void main( String[] args ) {
+    BankAccount ba = new BankAccount();
+	  BankAccount ba = new BankAccount();
+
+	ba.setName("Test Account");
+
+	ba.setPasswd("StrongPassword");
+
+	ba.setPin(0000);
+
+	ba.setAcctNum(123456789);
+
+	ba.setBalance(1000);
+
+	ba.withdraw(100);
+
+	ba.deposit(200);
+	  
+	system.out.println("Functional Responses: ");
+
+	system.out.println(ba.toString());
+
+	system.out.println("Should say: 'Account Name:  Test Account, Password: StrongPassword, Pin: 0000, Account Number: 123456789, Balance: 1100.0'");
+	
+	system.out.println("Error Messages:");
+	
+	ba.setAcctNum(4);
+	ba.setPin(4);
+	ba.withdraw(1000000);
+	system.out.println(ba.authenticate(123456789, "WeakPassword"));
+	system.out.println(ba.authenticate(4, "StrongPassword"));
+	system.out.println("Should give 3 unique error messages and then two false values");
+  }//end main()
+
+}//end class BankAccount
