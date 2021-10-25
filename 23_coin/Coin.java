@@ -1,8 +1,21 @@
-/***
- *  class Coin
- *  by Clyde "Thluffy" Sinclair
- *  SKELETON
- ***/
+/*
+Max Schneider
+APCS
+HW23 -- What Does Equality Look Like?/Coin.java/Used inctance variables and a driver file to simulate coin flips
+2021-10-24
+.4
+
+Discos:
+You can't use == for Strings
+How to use Math.random()
+Importance of incremental coding
+
+QCCs:
+Why can't you do == for Strings?
+Is there a good way to change biases?
+How common is it to use Math.random?
+Why does java need multiple constructors?
+ */
 
 public class Coin {
 
