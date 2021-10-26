@@ -23,7 +23,7 @@ public class Coin {
   private double value;
   public String upFace;
   private String name;
-  private flipCtr;
+  private int flipCtr;
   public int headsCtr;
   private int tailsCtr;
   private double bias;
@@ -164,7 +164,7 @@ public class Coin {
     if (upFace == other.upFace) {
 	    return true;
     } else {
-	    return false 
+	    return false;
 	    }
   }
 
