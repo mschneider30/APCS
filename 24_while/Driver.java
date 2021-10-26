@@ -30,8 +30,8 @@ public class Driver {
 	}
 	System.out.println(bob.flipCtr + " flips before reaching 10 matches");
 	  
-	Coin birth = new coin();
-	Coin birth2 = new coin();
+	Coin birth = new Coin();
+	Coin birth2 = new Coin();
 	while (birth.equalsCtr > 65536 && birth.equalsCtr % 2005 == 0) {
 		birth.flip();
 		birth2.flip();
