@@ -11,7 +11,6 @@
 ***/
 
 public class Driver {
-
   public static void main( String[] args ) {
       Coin first = new Coin("First coin");
 	while (first.headsCtr < 10) {
@@ -22,12 +21,15 @@ public class Driver {
 
 	Coin bob = new Coin("Bob Coin");
 	Coin steve = new Coin("Steve Coin");
-
-	while (bob.equals(steve.upFace) < 10) {
+	d=0;
+	while (d < 10) {
 		bob.flip();
 		steve.flip();
-		System.out.println("test");
+		if (bob.upFace == steve.upFace) {
+			d+=1;
+		}
 	}
+	System.out.println(bob.flipCtr "s before reaching 10 matches");
       /*===================BOTTOM======================*/
 
   }//end main()
