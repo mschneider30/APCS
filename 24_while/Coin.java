@@ -1,20 +1,25 @@
 /*
-Max Schneider
+Max Schneider and Paul Serbanescu
 APCS
-HW23 -- What Does Equality Look Like?/Coin.java/Used inctance variables and a driver file to simulate coin flips
-2021-10-24
-.4
+HW24 -- Get It While You Can/Coin.java/Used inctance variables and a driver file to simulate coin flips
+2021-10-25
+.6
 
 Discos:
-You can't use == for Strings
-How to use Math.random()
-Importance of incremental coding
+The importance of using or not and in conditionals when really meaning and
+the importance of public instance variables
+the importance of understanding code before trying it
+The importance of incremental coding
 
 QCCs:
-Why can't you do == for Strings?
-Is there a good way to change biases?
-How common is it to use Math.random?
-Why does java need multiple constructors?
+Can you use recursion to make this better?
+Is there a reason not ot make all the instance varrs public from the beginning?
+
+Mods:
+changed protection of instance variables
+added equalsCtr variable
+changed constructors to be more concise
+changed reset, equals, and toString to make them better for the Driver.
  */
 
 public class Coin {
