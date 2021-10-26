@@ -21,12 +21,11 @@ public class Driver {
 
 	Coin bob = new Coin("Bob Coin");
 	Coin steve = new Coin("Steve Coin");
-	d=0;
-	while (d < 10) {
+	while (bob.equalsCtr < 10) {
 		bob.flip();
 		steve.flip();
 		if (bob.upFace == steve.upFace) {
-			d+=1;
+			bob.equalsCtr+=1;
 		}
 	}
 	System.out.println(bob.flipCtr + "s before reaching 10 matches");
