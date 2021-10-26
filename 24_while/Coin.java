@@ -23,7 +23,7 @@ public class Coin {
   private double value;
   public String upFace;
   private String name;
-  private int flipCtr;
+  public int flipCtr;
   public int headsCtr;
   private int tailsCtr;
   private double bias;
