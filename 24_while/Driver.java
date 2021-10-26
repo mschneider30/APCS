@@ -32,7 +32,7 @@ public class Driver {
 	  
 	Coin birth = new Coin();
 	Coin birth2 = new Coin();
-	while (birth.equalsCtr < 65536 && birth.equalsCtr % 2005 != 0) {
+	while (birth.equalsCtr < 65536 || birth.equalsCtr % 2005 != 0) {
 		birth.flip();
 		birth2.flip();
 		if (birth.upFace == birth2.upFace) {
