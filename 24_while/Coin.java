@@ -21,14 +21,14 @@ public class Coin {
 
   //attributes aka instance vars
   private double value;
-  private String upFace;
+  public String upFace;
   private String name;
-  private int flipCtr;
+  private flipCtr;
   public int headsCtr;
   private int tailsCtr;
   private double bias;
 
-  //private int equalsCtr;
+  public int equalsCtr;
 
 
   /***
@@ -161,8 +161,11 @@ public class Coin {
    * or both showing tails. False otherwise.
    ***/
   public boolean equals( Coin other ) {
-    equalsCtr++;
-    return this.upFace.equals(other.upFace);
+    if (upFace == other.upFace) {
+	    return true;
+    } else {
+	    return false 
+	    }
   }
 
 
