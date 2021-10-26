@@ -28,7 +28,7 @@ public class Coin {
   private int tailsCtr;
   private double bias;
 
-  private int equalsCtr;
+  //private int equalsCtr;
 
 
   /***
