@@ -29,7 +29,7 @@ public class Driver {
 			d+=1;
 		}
 	}
-	System.out.println(bob.flipCtr "s before reaching 10 matches");
+	System.out.println(bob.flipCtr + "s before reaching 10 matches");
       /*===================BOTTOM======================*/
 
   }//end main()
