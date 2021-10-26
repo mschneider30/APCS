@@ -28,7 +28,18 @@ public class Driver {
 			bob.equalsCtr+=1;
 		}
 	}
-	System.out.println(bob.flipCtr + "s before reaching 10 matches");
+	System.out.println(bob.flipCtr + " flips before reaching 10 matches");
+	  
+	Coin birth = new coin();
+	Coin birth2 = new coin();
+	while (birth.equalsCtr > 65536 && birth.equalsCtr % 2005 == 0) {
+		birth.flip();
+		birth2.flip();
+		if (birth.upFace == birth2.upFace) {
+			birth.equalsCtr++;
+		} 
+	}
+	System.out.println(birth.flipCtr + " flips before reaching 10 matches");
       /*===================BOTTOM======================*/
 
   }//end main()
