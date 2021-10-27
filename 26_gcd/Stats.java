@@ -48,7 +48,7 @@ public class Stats {
       System.out.println(Stat1.gdc(112,224));
                          
       System.out.println("gdcER method: Should print 1, 3, 1, 112");
-      Stats Stat3 = new Stats();
+      Stats Stat2 = new Stats();
       System.out.println(Stat2.gdcER(1,3));
       System.out.println(Stat2.gdcER(3,9));
       System.out.println(Stat2.gdcER(213,214));
