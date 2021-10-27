@@ -4,6 +4,14 @@ APCS
 HW26 -- GCD Three Ways/Stats.java/Created 3 methods for determining GCD
 2021-10-27
 .4
+Disco:
+There are many ways to achieve one thing. Returning something ends the method. Can use this to my advantage to make code cleaner
+QCCs:
+Are ther certain times when one of these is better than the others?
+ALGO
+gcd: Starting with one, check every number below or equal to the first integer in ascending order. If the 2 intergers can be divided by the number, it is the new answer. When you get to the end the most recent answer is returned
+
+
 */
 
 public class Stats {
