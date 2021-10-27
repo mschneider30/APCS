@@ -35,11 +35,11 @@ public class Stats {
         } else {
           b-=a;
         }
-      }
       return a;
+      }
     
   public static void main(String[] args) {
-      System.out.println("gdc method: Should print 1, 3, 1, 112);
+      System.out.println("gdc method: Should print 1, 3, 1, 112");
       System.out.println(gdc(1,3));
       System.out.println(gdc(3,9));
       System.out.println(gdc(213,214));
