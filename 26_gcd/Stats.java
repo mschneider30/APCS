@@ -40,13 +40,14 @@ public class Stats {
   }
     
   public static void main(String[] args) {
+    /*
       System.out.println("gdc method: Should print 1, 3, 1, 112");
       Stats Stat1 = new Stats();
       System.out.println(Stat1.gdc(1,3));
       System.out.println(Stat1.gdc(3,9));
       System.out.println(Stat1.gdc(213,214));
       System.out.println(Stat1.gdc(112,224));
-                         
+     */                    
       System.out.println("gdcER method: Should print 1, 3, 1, 112");
       Stats Stat2 = new Stats();
       System.out.println(Stat2.gdcER(1,3));
