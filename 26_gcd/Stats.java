@@ -35,8 +35,8 @@ public class Stats {
         } else {
           b-=a;
         }
-      return a;
       }
+    return a;
   }
     
   public static void main(String[] args) {
