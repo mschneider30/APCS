@@ -9,14 +9,14 @@ HW26 -- GCD Three Ways/Stats.java/Created 3 methods for determining GCD
 public class Stats {
   public static int gcd( int a , int b) {
       int c = 1;
-      int answer = d;
+      int answer = 0;
       while (c <= a) {
         if (a%c==0 && b%c==0) {
-          d=c;
+          answer=c;
           }
         c++;
         }
-      return d;
+      return answer;
   }
   public static int gdcER (int a , int b) {
       if (a==b) {
@@ -30,7 +30,7 @@ public class Stats {
   }
   public static int gdcEW (int a, int b) {
       while (a!=b) {
-        if (a > B) {
+        if (a > b) {
           a-=b;
         } else {
           b-=a;
@@ -41,22 +41,25 @@ public class Stats {
     
   public static void main(String[] args) {
       System.out.println("gdc method: Should print 1, 3, 1, 112");
-      System.out.println(gdc(1,3));
-      System.out.println(gdc(3,9));
-      System.out.println(gdc(213,214));
-      System.out.println(gdc(112,224));
+      Stat Stat1 = new Stat;
+      System.out.println(Stat1.gdc(1,3));
+      System.out.println(Stat1.gdc(3,9));
+      System.out.println(Stat1.gdc(213,214));
+      System.out.println(Stat1.gdc(112,224));
                          
       System.out.println("gdcER method: Should print 1, 3, 1, 112");
-      System.out.println(gdcER(1,3));
-      System.out.println(gdcER(3,9));
-      System.out.println(gdcER(213,214));
-      System.out.println(gdcER(112,224));
+      Stat Stat3 = new Stat;
+      System.out.println(Stat2.gdcER(1,3));
+      System.out.println(Stat2.gdcER(3,9));
+      System.out.println(Stat2.gdcER(213,214));
+      System.out.println(Stat2.gdcER(112,224));
                          
       System.out.println("gdcEW method: Should print 1, 3, 1, 112");
-      System.out.println(gdcEW(1,3));
-      System.out.println(gdcEW(3,9));
-      System.out.println(gdcEW(213,214));
-      System.out.println(gdcEW(112,224));
+      Stat Stat3 = new Stat;
+      System.out.println(Stat3.gdcEW(1,3));
+      System.out.println(Stat3.gdcEW(3,9));
+      System.out.println(Stat3.gdcEW(213,214));
+      System.out.println(Stat3.gdcEW(112,224));
     
   }
 }
