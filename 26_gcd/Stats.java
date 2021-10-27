@@ -41,21 +41,21 @@ public class Stats {
     
   public static void main(String[] args) {
       System.out.println("gdc method: Should print 1, 3, 1, 112");
-      Stat Stat1 = new Stat();
+      Stats Stat1 = new Stats();
       System.out.println(Stat1.gdc(1,3));
       System.out.println(Stat1.gdc(3,9));
       System.out.println(Stat1.gdc(213,214));
       System.out.println(Stat1.gdc(112,224));
                          
       System.out.println("gdcER method: Should print 1, 3, 1, 112");
-      Stat Stat3 = new Stat();
+      Stats Stat3 = new Stats();
       System.out.println(Stat2.gdcER(1,3));
       System.out.println(Stat2.gdcER(3,9));
       System.out.println(Stat2.gdcER(213,214));
       System.out.println(Stat2.gdcER(112,224));
                          
       System.out.println("gdcEW method: Should print 1, 3, 1, 112");
-      Stat Stat3 = new Stat();
+      Stats Stat3 = new Stats();
       System.out.println(Stat3.gdcEW(1,3));
       System.out.println(Stat3.gdcEW(3,9));
       System.out.println(Stat3.gdcEW(213,214));
