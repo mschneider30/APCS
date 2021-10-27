@@ -37,6 +37,7 @@ public class Stats {
         }
       return a;
       }
+  }
     
   public static void main(String[] args) {
       System.out.println("gdc method: Should print 1, 3, 1, 112");
