@@ -47,11 +47,13 @@ public class Repeater {
         System.out.println(fenceW(1));
         System.out.println(fenceW(2));
         System.out.println(fenceW(3));
+        System.out.println(fenceW(30));
         System.out.println("---------------------" + "\nRecursion Tester");
         System.out.println(fenceW(-1));
         System.out.println(fenceR(0));
         System.out.println(fenceR(1));
         System.out.println(fenceR(2));
         System.out.println(fenceR(3));
+        System.out.println(fenceR(30));
     }
     }
