@@ -33,6 +33,7 @@ public class Rof {
             }
             reversed+=s.substring(index-1,index);
             return(reverseR(s.substring(1,sLength), reversed));
+    }
     public static String reverseR(String s, String reversed) {
             int sLength = s.length();
             int index = sLength - 1;
