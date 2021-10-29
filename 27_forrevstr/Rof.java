@@ -13,7 +13,7 @@ public class Rof {
             }
             int sLength = s.length();
             String reversed = "";
-            dummy="x";
+            String dummy="x";
             s+=dummy;
             for(int i = 0; i < sLength; i++) {
                     int index = sLength - i;
