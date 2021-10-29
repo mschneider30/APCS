@@ -8,7 +8,8 @@ Disco:
 Recursion can't call variables outside the function due to static rules
 For loops >>>>>>> recursion (See time in header)
 QCCs:
-How to recursion?
+Is their a more clean way to recursion?
+Can you circumvent the static non-static debate.
 
 */
 public class Rof {
@@ -35,19 +36,14 @@ public class Rof {
     }
     
     public static String reverseR(String s) {
-            if (s=="") {
+        if (s=="") {
                     return("Please enter non-empty string");
             }
-            String firstHalf = s.substring(0,s.length()/2);
-            String secondHalf = s.substring(s.length()/2,s.length());
-            if (reverseF(firstHalf) == secondHalf) {
-                    return firstHalf;
-            }
-            int sLength=s.length();
-            String firstLetter=s.substring(sLength-1,sLength);
-            firstLetter+=s;
-            return(reverseR(firstLetter.substring(0,sLength-1)));
-    
+        int len = s.length();
+
+        if (len == 1) { return s; }
+
+        return s.substring(len - 1, len) + reverseR(s.substring(0, len - 1));
     }
     
     public static void main(String[] args) {
