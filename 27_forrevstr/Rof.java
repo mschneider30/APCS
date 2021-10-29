@@ -34,7 +34,7 @@ public class Rof {
             return(reverseR(s.substring(1,sLength)));
     }
     
-    public static void main(String[] args) {
+    public void main(String[] args) {
         System.out.println("Fence Testing: Should return 1 post then 2 posts then 3 posts");
         System.out.println(fenceF(1));
         System.out.println(fenceF(2));
