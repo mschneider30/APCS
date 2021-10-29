@@ -13,6 +13,8 @@ public class Rof {
             }
             int sLength = s.length();
             String reversed = "";
+            dummy="x";
+            s+=dummy;
             for(int i = 0; i < sLength; i++) {
                     int index = sLength - i;
                     String newLetter = s.substring(index,index-1);
