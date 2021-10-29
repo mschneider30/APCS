@@ -31,7 +31,7 @@ public class Rof {
                     return firstHalf;
             }
             int sLength=s.length();
-            firstLetter=s.substring(sLength-1,sLength);
+            String firstLetter=s.substring(sLength-1,sLength);
             firstLetter+=s;
             return(reverseR(firstLetter.substring(sLength(0,sLength-1))));
     
