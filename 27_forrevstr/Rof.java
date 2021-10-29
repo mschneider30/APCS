@@ -9,18 +9,29 @@ public class Rof {
     }
     public static String reverseF(String s) {
             if (s=="") {
-                    System.out.println("Please enter non-empty string");
+                    return("Please enter non-empty string");
             }
             int sLength = s.length();
             String reversed = "";
-            //String dummy="x";
-            //s+=dummy;
             for(int i = 0; i < sLength; i++) {
                     int index = sLength - i;
                     String newLetter = s.substring(index-1,index);
                     reversed+=newLetter;
             }
             return reversed;
+    }
+    String reversed = "";
+    public static String reverseR(String s) {
+            int sLength = s.length();
+            int index = sLength - 1;
+            if (s=="") {
+                    return("Please enter non-empty string");
+            }
+            if (reversed.length() == sLength) {
+                    return(reversed);
+            }
+            reversed+=s.substring(index-1,index);
+            return(reverseR(s.substring(1,sLength);
     }
     
     public static void main(String[] args) {
@@ -33,6 +44,11 @@ public class Rof {
         System.out.println(reverseF("stressed"));
         System.out.println(reverseF("Stuyvesant"));
         System.out.println(reverseF(""));
+        
+        System.out.println("ReverseR testing: Should return 'desserts' then 'tnasevyutS' then an error message asking for a non-empty string");
+        System.out.println(reverseR("stressed"));
+        System.out.println(reverseR("Stuyvesant"));
+        System.out.println(reverseR(""));
         
         
     }
