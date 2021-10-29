@@ -23,7 +23,6 @@ public class Rof {
     
     public static String reverseR(String s) {
             int sLength = s.length();
-            int index = sLength - 1;
             if (s=="") {
                     return("Please enter non-empty string");
             }
@@ -31,19 +30,18 @@ public class Rof {
             if (reversed.length() == sLength) {
                     return(reversed);
             }
-            reversed+=s.substring(index-1,index);
+            reversed+=s.substring(sLength-1,sLength);
             return(reverseR(s.substring(1,sLength), reversed));
     }
     public static String reverseR(String s, String reversed) {
             int sLength = s.length();
-            int index = sLength - 1;
             if (s=="") {
                     return("Please enter non-empty string");
             }
-            if (reversed.length() == sLength) {
+            if (reversed.length() == sLength * 2) {
                     return(reversed);
             }
-            reversed+=s.substring(index-1,index);
+            reversed+=s.substring(sLength-1,sLength);
             return(reverseR(s.substring(1,sLength), reversed));
     }
     
