@@ -11,7 +11,7 @@ public class Rof {
             if (s=="") {
                     System.out.println("Please enter non-empty string");
             }
-            int sLength = s.length;
+            int sLength = s.length();
             String reversed = "";
             for(int i = 0; i < sLength; i++) {
                     int index = sLength - i;
