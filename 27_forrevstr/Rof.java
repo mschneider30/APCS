@@ -25,8 +25,8 @@ public class Rof {
             if (s=="") {
                     return("Please enter non-empty string");
             }
-            firstHalf = s.substring(0,s.length()/2);
-            secondHalf = s.substring(s.length()/2,s.length());
+            String firstHalf = s.substring(0,s.length()/2);
+            String secondHalf = s.substring(s.length()/2,s.length());
             if (reverseR(firstHalf) == secondHalf) {
                     return s;
             }
