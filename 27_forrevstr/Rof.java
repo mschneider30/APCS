@@ -7,12 +7,11 @@ public class Rof {
           return fence;
           
     }
-    public int length ();
     public static String reverseF(String s) {
             if (s=="") {
                     System.out.println("Please enter non-empty string");
             }
-            int sLength = length(s);
+            int sLength = s.length;
             String reversed = "";
             for(int i = 0; i < sLength; i++) {
                     int index = sLength - i;
