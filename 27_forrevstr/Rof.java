@@ -7,7 +7,7 @@ public class Rof {
           return fence;
           
     }
-    
+    public int length ()
     public static String reverseF(String s) {
             if (s=="") {
                     System.out.println("Please enter non-empty string");
