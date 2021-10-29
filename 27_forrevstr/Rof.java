@@ -20,8 +20,20 @@ public class Rof {
             }
             return reversed;
     }
-    String reversed = "";
-    public String reverseR(String s) {
+    
+    public static String reverseR(String s) {
+            int sLength = s.length();
+            int index = sLength - 1;
+            if (s=="") {
+                    return("Please enter non-empty string");
+            }
+            String reversed = "";
+            if (reversed.length() == sLength) {
+                    return(reversed);
+            }
+            reversed+=s.substring(index-1,index);
+            return(reverseR(s.substring(1,sLength), reversed));
+    public static String reverseR(String s, String reversed) {
             int sLength = s.length();
             int index = sLength - 1;
             if (s=="") {
@@ -31,10 +43,10 @@ public class Rof {
                     return(reversed);
             }
             reversed+=s.substring(index-1,index);
-            return(reverseR(s.substring(1,sLength)));
+            return(reverseR(s.substring(1,sLength), reversed));
     }
     
-    public void main(String[] args) {
+    public static void main(String[] args) {
         System.out.println("Fence Testing: Should return 1 post then 2 posts then 3 posts");
         System.out.println(fenceF(1));
         System.out.println(fenceF(2));
