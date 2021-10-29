@@ -3,8 +3,9 @@ public class Rof {
           String fence = "|";
           for (int i = 1;i < posts; i++) {
                fence+="--|";
-          return fence;
           }
+          return fence;
+          
     }
     public static void main(String[] args) {
         System.out.println(fenceF(1));
