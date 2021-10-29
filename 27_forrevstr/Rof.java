@@ -16,8 +16,9 @@ public class Rof {
             String reversed = "";
             int index = sLength - i;
             for(int i = 0; i < sLength; i++) {
-                    String newLetter = s.substring(index,index-1)
-                    reversed+=newLetter
+                    String newLetter = s.substring(index,index-1);
+                    reversed+=newLetter;
+            }
     }
     
     public static void main(String[] args) {
@@ -26,7 +27,7 @@ public class Rof {
         System.out.println(fenceF(2));
         System.out.println(fenceF(3));
         
-        System.out.println("ReverseF testing: Should return "desserts" then "tnasevyutS" then an error message asking for a non-empty string");
+        System.out.println("ReverseF testing: Should return 'desserts' then 'tnasevyutS' then an error message asking for a non-empty string");
         System.out.println(reverseF("stressed"));
         System.out.println(reverseF("Stuyvesant"));
         System.out.println(reverseF(""));
