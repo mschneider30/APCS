@@ -31,7 +31,7 @@ public class Rof {
                     return(reversed);
             }
             reversed+=s.substring(index-1,index);
-            return(reverseR(s.substring(1,sLength));
+            return(reverseR(s.substring(1,sLength)));
     }
     
     public static void main(String[] args) {
