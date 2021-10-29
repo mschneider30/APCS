@@ -1,4 +1,4 @@
-public class Fences {
+public class Rof {
     public static String fenceF(int posts) {
           String fence = "|";
           for (int i = 1;i < posts; i++) {
