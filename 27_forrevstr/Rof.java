@@ -14,8 +14,8 @@ public class Rof {
             }
             int sLength = length(s);
             String reversed = "";
-            int index = sLength - i;
             for(int i = 0; i < sLength; i++) {
+                    int index = sLength - i;
                     String newLetter = s.substring(index,index-1);
                     reversed+=newLetter;
             }
