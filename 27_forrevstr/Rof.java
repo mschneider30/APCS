@@ -33,7 +33,7 @@ public class Rof {
             int sLength=s.length();
             String firstLetter=s.substring(sLength-1,sLength);
             firstLetter+=s;
-            return(reverseR(firstLetter.substring(sLength(0,sLength-1))));
+            return(reverseR(firstLetter.substring(0,sLength-1)));
     
     }
     
