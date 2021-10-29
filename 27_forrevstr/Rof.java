@@ -18,6 +18,7 @@ public class Rof {
                     String newLetter = s.substring(index,index-1);
                     reversed+=newLetter;
             }
+            return reversed;
     }
     
     public static void main(String[] args) {
