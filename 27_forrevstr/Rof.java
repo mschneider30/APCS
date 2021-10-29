@@ -28,7 +28,7 @@ public class Rof {
             String firstHalf = s.substring(0,s.length()/2);
             String secondHalf = s.substring(s.length()/2,s.length());
             if (reverseR(firstHalf) == secondHalf) {
-                    return s;
+                    return firstHalf;
             }
             int sLength=s.length();
             firstLetter=s.substring(sLength-1,sLength);
