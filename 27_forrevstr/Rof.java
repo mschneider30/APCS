@@ -38,7 +38,7 @@ public class Rof {
             if (s=="") {
                     return("Please enter non-empty string");
             }
-            if (reversed.length() == sLength * 2) {
+            if (reversed.length() == sLength) {
                     return(reversed);
             }
             reversed+=s.substring(sLength-1,sLength);
