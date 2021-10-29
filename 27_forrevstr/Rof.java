@@ -1,3 +1,16 @@
+/*
+Max Schneider
+APCS
+HW27 -- For the love of Strings/Rof.java/tetsed recursion skills
+2021-10-28
+1.5
+Disco:
+Recursion can't call variables outside the function due to static rules
+For loops >>>>>>> recursion (See time in header)
+QCCs:
+How to recursion?
+
+*/
 public class Rof {
     public static String fenceF(int posts) {
           String fence = "|";
