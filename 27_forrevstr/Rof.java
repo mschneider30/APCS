@@ -22,27 +22,17 @@ public class Rof {
     }
     
     public static String reverseR(String s) {
-            int sLength = s.length();
             if (s=="") {
                     return("Please enter non-empty string");
+            if (reverseR(s.substring(0,s.length()/2))==s.substring(s.length()/2,sLength)) {
+                    return s;
+            int sLength=s.length();
+            firstLetter=s.substring(sLength-1,sLength);
+            firstLetter+=s;
             }
-            String reversed = "";
-            if (reversed.length() == sLength) {
-                    return(reversed);
-            }
-            reversed+=s.substring(sLength-1,sLength);
-            return(reverseR(s.substring(2,sLength), reversed));
+            return(reverseR(firstLetter.substring(sLength(0,sLength-1)));
     }
-    public static String reverseR(String s, String reversed) {
-            int sLength = s.length();
-            if (s=="") {
-                    return("Please enter non-empty string");
-            }
-            if (reversed.length() == sLength) {
-                    return(reversed);
-            }
-            reversed+=s.substring(sLength-1,sLength);
-            return(reverseR(s.substring(2,sLength), reversed));
+    
     }
     
     public static void main(String[] args) {
