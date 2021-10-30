@@ -1,4 +1,6 @@
-public String doubleChar(String str) {
+
+public class doubleChar {
+  public String doubleChar(String str) {
   int i=0;
   String s;
   s = "";
@@ -8,4 +10,10 @@ public String doubleChar(String str) {
     i++;
   }
   return s;
+}
+public static void main(String args[]) {
+  System.out.println(doubleChar("The"));
+  System.out.println(doubleChar("AAbb"));
+  System.out.println(doubleChar("Hi-There"));
+}
 }
