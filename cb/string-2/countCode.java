@@ -1,4 +1,4 @@
-public class {
+public class countCode{
   
   public int countCode(String str) {
   int counter = 0;
