@@ -19,8 +19,8 @@ public class {
 }
   
   public static void main(String args[]) {
-    system.out.println();
-    system.out.println();
-    system.out.println();
+    system.out.println(catDog("catdog"));
+    system.out.println(catDog("catcat"));
+    system.out.println(catDog("1cat1cadodog");
   }
 }
