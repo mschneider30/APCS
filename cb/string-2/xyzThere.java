@@ -1,4 +1,4 @@
-public class {
+public class xyzThere{
   
   public boolean xyzThere(String str) {
   for (int i = 0;i < str.length()-2;i++) {
