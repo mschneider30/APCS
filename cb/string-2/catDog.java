@@ -1,4 +1,4 @@
-public class {
+public class catDog{
   
   public boolean catDog(String str) {
   int cat = 0;
