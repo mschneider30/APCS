@@ -1,4 +1,4 @@
-public class {
+public class endOther{
   
   public boolean endOther(String a, String b) {
   if (a.length() > b.length()) {
