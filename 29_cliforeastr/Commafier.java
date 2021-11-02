@@ -29,25 +29,25 @@ public class Commafier {
     System.out.println(commafyF(0));
     System.out.println(commafyR(0));
     
-    System.out.println(commafyF(01));
-    System.out.println(commafyR(01));
+    System.out.println(commafyF(1));
+    System.out.println(commafyR(1));
     
-    System.out.println(commafyF(012));
-    System.out.println(commafyR(012));
+    System.out.println(commafyF(12));
+    System.out.println(commafyR(12));
     
-    System.out.println(commafyF(0123));
-    System.out.println(commafyR(0123));
+    System.out.println(commafyF(123));
+    System.out.println(commafyR(123));
     
-    System.out.println(commafyF(01234));
-    System.out.println(commafyR(01234));
+    System.out.println(commafyF(1234));
+    System.out.println(commafyR(1234));
     
-    System.out.println(commafyF(012345));
-    System.out.println(commafyR(012345));
+    System.out.println(commafyF(12345));
+    System.out.println(commafyR(12345));
     
-    System.out.println(commafyF(0123456));
-    System.out.println(commafyR(0123456));
+    System.out.println(commafyF(123456));
+    System.out.println(commafyR(123456));
     
-    System.out.println(commafyF(01234567));
-    System.out.println(commafyR(01234567));
+    System.out.println(commafyF(1234567));
+    System.out.println(commafyR(1234567));
   }
 }
