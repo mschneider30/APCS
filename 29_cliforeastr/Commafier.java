@@ -14,7 +14,17 @@ public class Commafier {
    }
    return answer;
   }
+  public static String commafyR (int a) {
+    a= Integer.toString(a);
+    if (a.length() < 4) {
+      return a;
+    }
+    String extract = a.substring(0,3);
+    String remnants = a.substring(3,a.length());
+    return (commfyR(remnants) + "," +extract)
+  }
   public static void main(String[] args) {
+    System.out.println(commafyF(10000000));
     System.out.println(commafyF(10000000));
   }
 }
