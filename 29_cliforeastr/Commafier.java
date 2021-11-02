@@ -4,7 +4,7 @@ public class Commafier {
     String simple = Integer.toString(a);
     char[] newStuff = simple.toCharArray();
     int n = 0;
-    for (String s : newStuff) {
+    for (char s : newStuff) {
       n+=1;
       if (n % 3 == 0) {
         answer = "," + s + answer;
