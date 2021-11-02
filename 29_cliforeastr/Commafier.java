@@ -15,4 +15,5 @@ public class Commafier {
   }
   public static void main(String[] args) {
     System.out.println(commafyF(10000000));
+  }
 }
