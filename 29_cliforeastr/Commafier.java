@@ -49,4 +49,5 @@ public class Commafier {
     
     System.out.println(commafyF(01234567));
     System.out.println(commafyR(01234567));
+  }
 }
