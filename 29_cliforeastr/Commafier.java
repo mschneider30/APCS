@@ -3,7 +3,6 @@ public class Commafier {
     String answer="";
     String simple = Integer.toString(a);
     char[] newStuff = simple.toCharArray();
-    System.out.println(newStuff);
     int n = 0;
     int factor = a % 3;
     for (char s : newStuff) {
