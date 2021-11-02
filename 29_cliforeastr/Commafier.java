@@ -7,9 +7,9 @@ public class Commafier {
     for (char s : newStuff) {
       n+=1;
       if (n % 3 == 0) {
-        answer = "," + s + answer;
+        answer = answer + "," + s;
       } else {
-        answer = s + answer;
+        answer += s;
       }
    }
    return answer;
