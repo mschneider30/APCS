@@ -2,10 +2,10 @@ public class Commafier {
   public static String commafyF(int a) {
     String answer="";
     String simple = Integer.toString(a);
-    String[] newStuff = simple.toStringArray();
+    char[] newStuff = simple.toCharArray();
     int n = 0;
     int factor = a % 3;
-    for (String s : newStuff) {
+    for (char s : newStuff) {
       n+=1;
       if (n % 3 == factor  && n != simple.length()) {
         answer = answer + s + ",";
