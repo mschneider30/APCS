@@ -6,7 +6,7 @@ public class Commafier {
     int n = 0;
     for (char s : newStuff) {
       n+=1;
-      if (n % 3 == 0) {
+      if (n % 3 == 0  && n != simple.length()) {
         answer = answer + s + ",";
       } else {
         answer += s;
