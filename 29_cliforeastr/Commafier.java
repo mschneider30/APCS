@@ -1,7 +1,8 @@
 public class Commafier {
   public static String commafyF(int a) {
     String answer="";
-    String [] newStuff = Integer.toString(a);
+    String simple = Integer.toString(a);
+    String [] newStuff = simple.toCharArray();
     int n = 0;
     for (String s : newStuff) {
       n+=1;
