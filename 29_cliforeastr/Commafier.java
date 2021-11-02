@@ -5,6 +5,7 @@ public class Commafier {
     char[] newStuff = simple.toCharArray();
     int n = 0;
     int factor = a % 3;
+    System.out.println(factor);
     for (char s : newStuff) {
       n+=1;
       if (n % 3 == factor  && n != simple.length()) {
