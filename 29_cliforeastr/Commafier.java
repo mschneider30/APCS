@@ -19,8 +19,8 @@ public class Commafier {
     if (b.length() < 4) {
       return b;
     }
-    String extract = b.substring(0,3);
-    String remnants = b.substring(3,b.length());
+    String remnants = b.substring(0,3);
+    String extract = b.substring(3,b.length());
     int remnantsI = Integer.parseInt(remnants);
     return (commafyR(remnantsI) + "," + extract);
   }
