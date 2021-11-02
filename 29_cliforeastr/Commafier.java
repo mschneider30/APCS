@@ -21,7 +21,7 @@ public class Commafier {
     }
     String extract = b.substring(0,3);
     String remnants = b.substring(3,b.length());
-    int remnantsI = Integer.parseInt(remnant);
+    int remnantsI = Integer.parseInt(remnants);
     return (commafyR(remnantsI) + "," + extract);
   }
   public static void main(String[] args) {
