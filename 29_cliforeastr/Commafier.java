@@ -4,7 +4,7 @@ public class Commafier {
     String simple = Integer.toString(a);
     char[] newStuff = simple.toCharArray();
     int n = 0;
-    int factor = a % 3;
+    int factor = simple.length() % 3;
     System.out.println(factor);
     for (char s : newStuff) {
       n+=1;
