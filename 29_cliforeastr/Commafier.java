@@ -1,3 +1,12 @@
+/*
+Max Schneider
+APCS
+HW29 -- Which Way Do You Roll?/Recursion vs Iteration/Turned integers into strings with appropriae commas
+2021-11-01
+.9
+*/
+
+
 public class Commafier {
   public static String commafyF(int a) {
     String answer="";
