@@ -1,6 +1,6 @@
 
 public class doubleChar {
-  public String doubleChar(String str) {
+  public static String doubleChar(String str) {
   int i=0;
   String s;
   s = "";

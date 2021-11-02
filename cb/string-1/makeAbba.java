@@ -1,5 +1,5 @@
 public class makeAbba{
-  public String makeAbba(String a, String b) {
+  public static String makeAbba(String a, String b) {
   String greeting = a+b+b+a;
   return greeting;
 }

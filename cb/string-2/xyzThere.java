@@ -1,6 +1,6 @@
 public class xyzThere{
   
-  public boolean xyzThere(String str) {
+  public static boolean xyzThere(String str) {
   for (int i = 0;i < str.length()-2;i++) {
     String Letters = str.substring(i,i+3);
     if (Letters.equals("xyz")) {
@@ -16,8 +16,8 @@ public class xyzThere{
 
   
   public static void main(String args[]) {
-    system.out.println(xyzThere("abcxyz"));
-    system.out.println(xyzThere("abc.xyz"));
-    system.out.println(xyzThere("xyz.abc"));
+    System.out.println(xyzThere("abcxyz"));
+    System.out.println(xyzThere("abc.xyz"));
+    System.out.println(xyzThere("xyz.abc"));
   }
 }

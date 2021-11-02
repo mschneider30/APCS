@@ -1,6 +1,6 @@
 public class countCode{
   
-  public int countCode(String str) {
+  public static int countCode(String str) {
   int counter = 0;
   for (int i = 0; i < str.length()-3; i++) {
     String letters = str.substring(i,i+2);
@@ -14,8 +14,8 @@ public class countCode{
 
   
   public static void main(String args[]) {
-    system.out.println(countCode("aaacodebbb"));
-    system.out.println(countCode("codexxdoce"));
-    system.out.println(countCode("cozexxcope"));
+    System.out.println(countCode("aaacodebbb"));
+    System.out.println(countCode("codexxdoce"));
+    System.out.println(countCode("cozexxcope"));
   }
 }

@@ -1,5 +1,5 @@
 public class helloName{
-  public String helloName(String name) {
+  public static String helloName(String name) {
   String greeting = "Hello " + name +"!";
   return greeting;
   }
