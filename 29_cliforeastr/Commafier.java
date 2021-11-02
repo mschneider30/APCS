@@ -4,9 +4,10 @@ public class Commafier {
     String simple = Integer.toString(a);
     char[] newStuff = simple.toCharArray();
     int n = 0;
+    int factor = a % 3;
     for (char s : newStuff) {
       n+=1;
-      if (n % 3 == 0  && n != simple.length()) {
+      if (n % 3 == factor  && n != simple.length()) {
         answer = answer + s + ",";
       } else {
         answer += s;
