@@ -5,7 +5,6 @@ public class Commafier {
     char[] newStuff = simple.toCharArray();
     int n = 0;
     int factor = simple.length() % 3;
-    System.out.println(factor);
     for (char s : newStuff) {
       n+=1;
       if (n % 3 == factor  && n != simple.length()) {
@@ -21,8 +20,9 @@ public class Commafier {
     if (b.length() < 4) {
       return b;
     }
-    String remnants = b.substring(0,3);
-    String extract = b.substring(3,b.length());
+    int r = b.length()-3;
+    String remnants = b.substring(0,r);
+    String extract = b.substring(r,b.length());
     int remnantsI = Integer.parseInt(remnants);
     return (commafyR(remnantsI) + "," + extract);
   }
