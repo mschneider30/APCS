@@ -13,6 +13,6 @@ public class Commafier {
    }
    return answer;
   }
-  public staic void main(String[] args) {
+  public static void main(String[] args) {
     System.out.println(commafyF(10000000));
 }
