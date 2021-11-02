@@ -15,13 +15,14 @@ public class Commafier {
    return answer;
   }
   public static String commafyR (int a) {
-    a= Integer.toString(a);
-    if (a.length() < 4) {
-      return a;
+    String b= Integer.toString(a);
+    if (b.length() < 4) {
+      return b;
     }
-    String extract = a.substring(0,3);
-    String remnants = a.substring(3,a.length());
-    return (commfyR(remnants) + "," +extract);
+    String extract = b.substring(0,3);
+    String remnants = b.substring(3,b.length());
+    int remnantsI = Integer.parseInt(remnant);
+    return (commafyR(remnantsI) + "," + extract);
   }
   public static void main(String[] args) {
     System.out.println(commafyF(10000000));
