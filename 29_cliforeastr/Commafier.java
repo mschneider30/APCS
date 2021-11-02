@@ -2,7 +2,7 @@ public class Commafier {
   public static String commafyF(int a) {
     String answer="";
     String simple = Integer.toString(a);
-    String [] newStuff = simple.toCharArray();
+    char[] newStuff = simple.toCharArray();
     int n = 0;
     for (String s : newStuff) {
       n+=1;
