@@ -26,12 +26,12 @@ public class Commafier {
   }
   public static void main(String[] args) {
     System.out.println(commafyF(10000000));
-    System.out.println(commafyF(10000000));
+    System.out.println(commafyR(10000000));
     
     System.out.println(commafyF(100000));
-    System.out.println(commafyF(100000));
+    System.out.println(commafyR(100000));
     
     System.out.println(commafyF(10));
-    System.out.println(commafyF(10));
+    System.out.println(commafyR(10));
   }
 }
