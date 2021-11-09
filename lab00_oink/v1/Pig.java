@@ -1,13 +1,13 @@
 /***
- * Name_C
+ * NAMESPACE (Orion Roven, Max Schneider, Paul Serbanescu)
  * APCS
- * HW31 -- deploying linear search on Strings, using helper methods
- * 2021-11-04r
- * time spent: .5hrs
+ * Lab00 - Etterbay Odingcay Oughthray Ollaborationcay
+ * 2021-11-08r
+ * time spent: 1hr
  *
  * class Pig
  * a Pig Latin translator
- * ~~~~~~~~~~~~~~~~~~~ V1 ~~~~~~~~~~~~~~~~~~~
+ * ~~~~~~~~~~~~~~~~~~~ V1~~~~~~~~~~~~~~~~~~~
  *           9
  *     ,--.-'-,--.
  *     \  /-~-\  /
