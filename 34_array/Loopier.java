@@ -68,11 +68,13 @@ public class Loopier {
 	public static void main(String[] args) {
 		int[] r = new int[150];
 		populateArray(r);
+		int random = (int)(Math.random() * 100);
+		System.out.println(random);
 		System.out.println(arrayToString(r));
-		System.out.println(linSearch(r,55));
-		System.out.println(linSearchR(r,55));
-		System.out.println(freq(r,55));
-		System.out.println(freqRec(r,55));
+		System.out.println(linSearch(r,random));
+		System.out.println(linSearchR(r,random));
+		System.out.println(freq(r,random));
+		System.out.println(freqRec(r,random));
 	}
 
 
