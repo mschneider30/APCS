@@ -28,7 +28,7 @@ public class Loopier {
 		return -1;
 	}
 	public static int linSearchR(int[] a, int target){
-        	if (a.length == 0){
+        	if (freqRec(a,target)==0){
             	return -1;
         	}else{
             		if (a[0] == target){
