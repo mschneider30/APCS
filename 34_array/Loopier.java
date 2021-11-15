@@ -1,3 +1,23 @@
+/*
+Team Blue Steaks - Max Schneider, David Deng, Faiyaz Rafee
+APCS
+HW34 -- A Pirate's Life For Me/Working with Integer Arrays/Began explorng integer array by writing methods to populate, write, and search arrays
+time spent:
+2
+
+Disco:
+Basic ideas with integer arrays such as
+	array.length
+	array[index]
+	for loops to make new arrays
+	how new is used to allocate memory and hance how to initialize arrays
+QCCS:
+Is there a way to write LinSearchR without referencing freq?
+Can you refer back to an earlier array in a recursive function
+
+*/
+
+
 import java.lang.Object;
 public class Loopier {
 	public static void populateArray(int[] x) {
