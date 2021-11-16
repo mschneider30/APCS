@@ -16,9 +16,6 @@ Is there a way to write LinSearchR without referencing freq?
 Can you refer back to an earlier array in a recursive function
 
 */
-
-
-import java.lang.Object;
 public class Loopier {
 	public static void populateArray(int[] x) {
 		for (int i = 0; i < x.length; i ++) {
