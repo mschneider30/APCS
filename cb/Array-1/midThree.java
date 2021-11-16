@@ -5,5 +5,6 @@ public class midThree {
     fresh[1]=nums[(nums.length-1)/2 ];
     fresh[2]=nums[(nums.length-1)/2 +1];
     return fresh;
+    
   }
 }
