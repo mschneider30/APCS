@@ -1,0 +1,34 @@
+Compile-time Errors - something is wrong with syntax
+Run-time Errors - something run with program while running eg. StackOverflow
+Logic Errors - Code works but not how you wanted
+
+Debugging compile-time errors - The best way to do this is to use incremental development, the idea of writing small bits at a time and running the code often
+Remember - 10 errors does not mean 10 mistakes, errors can spiral
+Also Remember - Compiler may suggest invalid fixes. logic is very important
+
+Run-time errors
+The biggest problem that causes run-time errors is the existence of infinite loops or infinite recursion. Always ensure that this does not happen by TRACING TRACING TRACING.
+Tip - Add print messages during different times to see flow of execution
+
+Exceptions
+Null - Some variable is not getting a value assigned to it. Try assigning different vars values until it works
+OutOfBounds - Indexing is wrong. Check all causes
+Arithmetic  - Division by 0 etc.
+
+Don't put too many print statements. Remember, print statements are for the convenience of the user so too mahy defeat the purpose. Perhaps condense statements by putting more stuff on one line, or organizing them.
+
+Logic Errors - Helpful Tool: java Visualizer
+If code does not do what it is supposed to, break it down into parts. Also, try printing variables at certain points to see if they equal what they should
+TRACE TRACE TRACE
+Common numerical errors come from float to int mistakes. Always check for them.
+
+Break Down complex expressions. Declare boolean expressions as variables. Initialize variables before statement.
+Use parentheses for order of ops.
+
+If returning wrong stuff, add in temp. values
+
+I AM SOOOOOOO STUCK
+Step away from the computer
+Get food
+Bring in someone else
+DUCKIES!!!!!!!!!!!
