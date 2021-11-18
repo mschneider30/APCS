@@ -1,11 +1,15 @@
 /*****************************************************
- * Clyde "Thluffy" Sinclair
- * APCS pd00
+ * Team Blue Steaks - Max Schneider, Faiyaz Rafee, David Deng
+ * APCS pd07
  * HW38 -- Shmoney
  * 2021-11-18
  *
- * class Slots
- * skeleton
+ * Disco:
+ How == does not work for two objects with value 3. Only .equals works.
+ How to make code very simple to Visualize effectively
+ * QCCs:
+ why does FRUITS exist? Can't you just reset _fruits?
+ time spent: .2
  *****************************************************/
 
 public class Slots {
@@ -15,18 +19,14 @@ public class Slots {
     "lime", "lime", "lime",
     "lemon", "lemon", "lemon",
     "cherry", "cherry", "cherry",
-    /*
-      add extra fruits until your heart is content...
-      Some suggestions:
     "orange", "orange", "orange",
     "grapefruit", "grapefruit", "grapefruit",
     "tangerine", "tangerine", "tangerine",
     "ugli", "ugli", "ugli",
-    */
     "peach", "peach", "peach"
   };
 
-  private String[] _fruits; //to be init'd by each instance
+  public String[] _fruits; //to be init'd by each instance
 
 
   /*=====================================
@@ -55,7 +55,7 @@ public class Slots {
   {
     String result ="";
     for (int i = 0 ; i < 3; i ++) {
-      result+=FRUITS[i];
+      result+=_fruits[i];
       if (i < 2) {
         result+="\t";
       }
@@ -69,10 +69,9 @@ public class Slots {
     pre:  _fruits array exists
     post: elements at indices i, j are swapped
     =====================================*/
-  private void swap( int i, int j )
+  public void swap( int i, int j )
   {
-    String holder ="";
-    holder = _fruits[i];
+    String holder = _fruits[i];
     _fruits[i]=_fruits[j];
     _fruits[j]=holder;
   }
@@ -88,9 +87,9 @@ public class Slots {
     // A simple approach to shuffling:
     // iterate through the array, swapping
     // the val at each index with a randomly chosen other index
-    for(int i = 0; i < FRUITS.length;i++  ) {
-int random = (int)(Math.random()*FRUITS.length);     
- _fruits.swap(random, i );
+    for(int i = 0; i < _fruits.length; i++  ) {
+        int random = (int)(Math.random()*_fruits.length);
+        swap(i, random);
   }
 
 }
@@ -100,12 +99,12 @@ int random = (int)(Math.random()*FRUITS.length);
     post: returns true if first 3 slots represent winning combo,
     false otherwise
     =====================================*/
-//  public boolean jackpot()
+  public boolean jackpot()
   {
-  //  boolean retBoo = false;
+    boolean retBoo = false;
+    retBoo = (_fruits[0].equals(_fruits[1]) && _fruits[0].equals(_fruits[2]));
 
-
-//    return retBoo;
+    return retBoo;
   }
 
 
@@ -116,13 +115,17 @@ int random = (int)(Math.random()*FRUITS.length);
     or if first 3 slots mutually distinct,
     false otherwise
     =====================================*/
-  // public boolean miniWin()
-  // {
-  //   boolean retBoo = ?
-  //
-  //
-  //   return retBoo;
-  // }
+  public boolean miniWin()
+  {
+    boolean retBoo = false;
+    retBoo = (_fruits[0].equals(_fruits[1]) && _fruits[0].equals(_fruits[2]));
+    if (!retBoo) {
+      retBoo = !(_fruits[0].equals(_fruits[1]) || _fruits[0].equals(_fruits[2]) || _fruits[1].equals(_fruits[2]));
+    }
+
+
+    return retBoo;
+  }
 
 
   //main() method for testing
@@ -143,7 +146,7 @@ int random = (int)(Math.random()*FRUITS.length);
     System.out.println( "Machine01 state:\t" + machine01 );
     System.out.println( "Machine02 state:\t" + machine02 );
     System.out.println();
-/*
+
     //test gamble-until-you-win mechanism
     System.out.println( "Preparing to spin until a mini win! . . ." );
     System.out.println( "------------------------------------" );
@@ -167,7 +170,6 @@ int random = (int)(Math.random()*FRUITS.length);
     System.out.println( "====================================" );
     System.out.println( "Your spin..." + "\t" + machine01 );
     System.out.println( "JACKPOT!\n" );
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main
 
 }//end class Slots
