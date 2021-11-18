@@ -90,7 +90,7 @@ public class Slots {
     // the val at each index with a randomly chosen other index
     for(int i = 0; i < FRUITS.length;i++  ) {
 int random = (int)(Math.random()*FRUITS.length);     
- _fruits.swap(random, i );
+ swap(random, i );
   }
 
 }
