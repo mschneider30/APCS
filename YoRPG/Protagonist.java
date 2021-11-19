@@ -6,7 +6,7 @@ public int taken;
 public double damageM;
 public double takenM;
 public Protagonist (String g) {
-health = 50;
+health = 100;
 name = g;
 damage = 0;
 }
@@ -20,8 +20,8 @@ g.health = g.health - damage;
 return damage;
 }
 public void specialize () {
-damageM = (Math.random()*2.5+1);
-takenM = (Math.random()*1.5+1);
+damageM = (2.5);
+takenM = (2.5);
 }
 public void normalize () {
 damageM = 1;

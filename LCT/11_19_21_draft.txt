@@ -1,0 +1,13 @@
+Friday 2021-11-19 :: ap251 game production company :: by Max Schneider (Filling in for Orion Roven)
+
+Tech news: https://www.nytimes.com/2021/11/19/technology/can-a-machine-learn-morality.html
+
+Note: We all incurred huge amounts of stress due to the absence of Mr. Mykolyk, but he apologized so its ok.
+
+We were overseen by an anonymous sub who talked a lot about Hat-tricks and Harley-Davidson.
+We spent the period working through our plans to write our requisite classes to get YoRPG to work. The concepts of Egoless Programming clearly were in full effect with every trio working hard and more importantly working together
+
+HW39: 
+
+Next LCT
+Orion Roven (oroven30@stuy.edu) - Filling in for me (Max Schneider)

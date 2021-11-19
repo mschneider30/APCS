@@ -7,7 +7,7 @@ public boolean isAlive (){
 return (health > 0);
 }
 public int attack (Protagonist g){
+g.health = g.health - g.taken;
 return g.taken;
 }
 }
-
