@@ -1,3 +1,17 @@
+// Blue Steaks - Max Schneider, Faiyaz Rafee, David Deng
+// APCS pd7
+// HW41 -- Be Rational
+// 2021-11-30
+/**
+Disco:
+  Something in our plan was bad, but we got lucky and it didn't translate to the code
+  Keep-Change-Flip remains top-tier
+QCC:
+  Is "this" important?
+time spent: 0
+**/
+
+
 public class Rational {
   private int numerator;
   private int denominator;
@@ -29,6 +43,10 @@ public class Rational {
     Rational r1 = new Rational();
     Rational r2 = new Rational(1,2);
     Rational r3 = new Rational(1,3);
+    Rational r5 = new Rational(2,2);
+    Rational r6 = new Rational(3,3);
+    Rational r7 = new Rational(8,1);
+    Rational r8 = new Rational(4,1);
 
     System.out.println(r1.toString());
     System.out.println(r2.toString());
@@ -38,10 +56,10 @@ public class Rational {
     System.out.println(r2.floatValue());
     System.out.println(r3.floatValue());
 
-    r2.multiply(r3);
-    System.out.println(r2.toString());
+    r5.multiply(r6);
+    System.out.println(r5.toString());
 
-    r3.divide(r2);
-    System.out.println(r3.toString());
+    r7.divide(r8);
+    System.out.println(r8.toString());
   }
 }
