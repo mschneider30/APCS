@@ -1,8 +1,16 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
+// Blue Steaks - Max Schneider, Faiyaz Rafee, David Deng
+// APCS pd7
 // HW40 -- 2D arrays
 // 2021-11-30
-
+/**
+Disco:
+  For each loops are very efficient for getting through 2D arrays. Only problem is the fact that you have to use a counter in order to determine the correct time to end a list.
+  Writing a print method (or overwriting toString) is essential to writing this code because you need to be able present it.
+  Arrays that are not assigned values default to zero
+QCC:
+  None
+time spent: .1
+**/
 public class TwoDimArray
 {
   //postcond: prints each row of 2D int array a on its own line
