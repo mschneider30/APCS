@@ -28,7 +28,7 @@ public class SuperArray
   {
     String outVal = "[";
     for (int i = 0; int i < this._data.length ; i++) {
-	    if (i == this.length-1) {
+	    if (i == this.data.length-1) {
 		    outVal+=this._data.length[i];
 	    } else {
 		    outVal+=this._data[i]+", ";
