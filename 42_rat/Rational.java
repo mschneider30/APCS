@@ -1,3 +1,19 @@
+// Blue Steaks - Max Schneider, Faiyaz Rafee, David Deng
+// APCS pd7
+// HW42 -- Be Rational
+// 2021-12-02
+/**
+Disco:
+  Power of a dummy instance of a class
+  Power of this
+  Importance of organized main method to see if code works
+  Importance of java visualizer
+QCC:
+  More efficient ways to copy an instance
+  Better methods to add and subtract
+time spent: .2
+**/
+
 public class Rational {
   private int numerator;
   private int denominator;
@@ -13,17 +29,6 @@ public class Rational {
 
   public String toString() {
     return ("(" + numerator + " / " + denominator + ")");
-  }
-  public float floatValue () {
-    return (float)numerator/(float)denominator;
-  }
-  public void multiply (Rational r) {
-    this.numerator=this.numerator*r.numerator;
-    this.denominator=this.denominator*r.denominator;
-  }
-  public void divide (Rational r) {
-    this.numerator=this.numerator*r.denominator;
-    this.denominator=this.denominator*r.numerator;
   }
 
   public void add (Rational r) {
@@ -79,7 +84,7 @@ public class Rational {
 
    r1.add(r2);
    System.out.println("1/2 + 3/2 = 8/4: " + r1);
-   
+
    System.out.println("GCD of 8 and 4 = 4: "+ r1.GCD());
 
    r1.reduce();
