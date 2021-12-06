@@ -20,6 +20,7 @@ public class SuperArray
   public SuperArray()
   {
     this._data = new obj[10];
+    this._size = this._data.length;
   }
 
 
@@ -27,11 +28,11 @@ public class SuperArray
   public String toString()
   {
     String outVal = "[";
-    for (int i = 0; int i < this._data.length ; i++) {
-	    if (i == this.data.length-1) {
+    for (int i = 0; int i < this._size ; i++) {
+	    if (i == this._size-1) {
 		    outVal+=this._data.length[i];
 	    } else {
-		    outVal+=this._data[i]+", ";
+		    outVal+=(this._data[i]+", ");
 	    }
 	
     }
