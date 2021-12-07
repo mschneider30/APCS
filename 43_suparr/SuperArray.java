@@ -1,12 +1,23 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
+// Max Schneider
+// APCS pd7
 // HW43 -- encapsulation (basic SuperArray functionality)
-// 2021-12-07t
+// 2021-12-06
 
 /***************************
  * class SuperArray
  * Wrapper class for array. Facilitates resizing,
  * getting and setting element values.
+
+ Disco:
+ * importance of this
+ * it is helpful to have the size instance variable
+ * Size needs to be reset every time the length is changed
+
+ QCC:
+ *Possible Limitations
+ *Does this work for Strings?
+    *Can we have this work for arrays of multiple types?
+ * Waht is the potential of For loops and the set mthod?
  ***************************/
 
 public class SuperArray
@@ -19,7 +30,7 @@ public class SuperArray
   //default constructor – initializes 10-item array
   public SuperArray()
   {
-    this._data = new obj[10];
+    this._data = new int[10];
     this._size = this._data.length;
   }
 
@@ -28,30 +39,35 @@ public class SuperArray
   public String toString()
   {
     String outVal = "[";
-    for (int i = 0; int i < this._size ; i++) {
+    for (int i = 0; i < this._size ; i++) {
 	    if (i == this._size-1) {
-		    outVal+=this._data.length[i];
+		    outVal+=this._data[i];
 	    } else {
 		    outVal+=(this._data[i]+", ");
 	    }
-	
+
     }
     outVal+="]";
-    System.out.println(outVal);
+    return outVal;
   }
 
 
   //double capacity of SuperArray
   private void expand()
   {
-    /* YOUR IMPLEMENTATION HERE */
+    int[] newArray = new int[this._size * 2];
+    for (int i = 0;i < this._size; i++) {
+      newArray[i]=this._data[i];
+    }
+    this._data=newArray;
+    this._size *=2;
   }
 
 
   //accessor -- return value at specified index
   public int get( int index )
   {
-    /* YOUR IMPLEMENTATION HERE */
+    return _data[index];
   }
 
 
@@ -59,7 +75,9 @@ public class SuperArray
   //           return old value at index
   public int set( int index, int newVal )
   {
-    /* YOUR IMPLEMENTATION HERE */
+    int answer = get(index);
+    _data[index]=newVal;
+    return answer;
   }
 
 
@@ -70,7 +88,7 @@ public class SuperArray
       SuperArray curtis = new SuperArray();
       System.out.println( "Printing empty SuperArray curtis..." );
       System.out.println( curtis );
-    /*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
+
       for( int i = 0; i < curtis._data.length; i++ ) {
       curtis.set( i, i * 2 );
       }
@@ -80,10 +98,13 @@ public class SuperArray
 
       for( int i = 0; i < 3; i++ ) {
       curtis.expand();
+      for( int b = 0; b < curtis._size; b++ ) {
+      curtis.set( b, (int)(Math.random()*100) );
+      }
       System.out.println("Printing expanded SuperArray curtis...");
       System.out.println(curtis);
       }
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~~~~*/
+
   }//end main()
 
 
