@@ -1,5 +1,5 @@
-// Clyde "Thluffy" Sinclair
-// APCS1 pd0
+// Blue Steaks - Max Schneider, Faiyaz Rafee, David Deng
+// APCS1 pd7
 // HW44 -- expanding SuperArray functionality, encapsulation
 // 2021-12-08w
 
@@ -13,6 +13,14 @@
  * adding an element to end of array
  * adding an element at specified index
  * removing an element at specified index
+
+ Disco:
+ *Importance of .this. Code did not work otherwise.
+ *JAVA VISUALIZER!!!
+ *the size() method is very helpful and needs to be utitlized anytime a we chnage the number of meaning ful values in the arrays
+
+ QCCs:
+ How much less inefficient is a deep copy?
  ***************************/
 
 public class SuperArray
