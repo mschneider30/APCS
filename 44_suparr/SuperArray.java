@@ -18,47 +18,52 @@
 public class SuperArray
 {
 
-  private int[] _data;  //underlying ("encapsulated") container
+  private int[] _data;  //underlying container
   private int _size;    //number of elements in this SuperArray
 
 
   //default constructor – initializes 10-item array
   public SuperArray()
   {
-    _data = new int[10];
-    _size = 0;
+    this._data = new int[10];
+    this._size = 0;
   }
 
 
   //output SuperArray in [a,b,c] format
   public String toString()
   {
-    String foo = "[";
-    for( int i = 0; i < _size; i++ ) {
-      foo += _data[i] + ",";
+    this._size=size();
+    String outVal = "[";
+    for (int i = 0; i < this._size ; i++) {
+	    if (i == this._size-1) {
+		    outVal+=this._data[i];
+	    } else {
+		    outVal+=(this._data[i]+", ");
+	    }
+
     }
-    if ( foo.length() > 1 )
-      //shave off trailing comma
-      foo = foo.substring( 0, foo.length()-1 );
-    foo += "]";
-    return foo;
+    outVal+="]";
+    return outVal;
   }
 
 
   //double capacity of SuperArray
   private void expand()
   {
-    int[] temp = new int[ _data.length * 2 ];
-    for( int i = 0; i < _data.length; i++ )
-      temp[i] = _data[i];
-    _data = temp;
+    int[] newArray = new int[this._size * 2];
+    for (int i = 0;i < this._size; i++) {
+      newArray[i]=this._data[i];
+    }
+    this._data=newArray;
+    this._size *=2;
   }
 
 
   //accessor -- return value at specified index
   public int get( int index )
   {
-    return _data[index];
+    return this._data[index];
   }
 
 
@@ -66,34 +71,34 @@ public class SuperArray
   //           return old value at index
   public int set( int index, int newVal )
   {
-    int temp = _data[index];
-    _data[index] = newVal;
-    return temp;
+    int answer = get(index);
+    this._data[index]=newVal;
+    return answer;
   }
 
 
   //adds an item after the last item
   public void add( int newVal )
   {
-    if (_size == _data.length) {
+    if (this._size == this._data.length) {
       expand();
     }
-    _data[_size]=newVal;
-    _size+=1;
+    this._data[this._size]=newVal;
+    this._size=this.size();
   }
 
 
   //inserts an item at index
   public void add( int index, int newVal )
   {
-    if (_size == _data.length) {
+    if (this._size >= this._data.length) {
       expand();
     }
-    for(int i = _data.length-1; i>index;i--) {
-      _data[i]=_data[i+1];
+    for(int i = this._size; i>index;i--) {
+      this._data[i]=this._data[i-1];
     }
-    _data[index]=newVal;
-    _size+=1;
+    this._data[index]=newVal;
+    this._size=this.size();
   }
 
 
@@ -101,19 +106,23 @@ public class SuperArray
   //shifts elements left to fill in newly-empted slot
   public void remove( int index )
   {
-    for(int i = index; i<_data.length;i++) {
-      _data[i]=_data[i+1];
+    for(int i = index; i<this._size-1;i++) {
+      this._data[i]=this._data[i+1];
     }
-    _size--;
+    this._data[this._size-1]=0;
+    this._size=this.size();
   }
 
 
   //return number of meaningful items in _data
   public int size()
   {
-    int answer = _size;
-    for (int i = _size; i == 0; i--) {
+    int answer = this._data.length;
+    for (int i = this._data.length-1; this._data[i] == 0; i--) {
       answer--;
+      if (i == 0) {
+        return answer;
+      }
     }
     return answer;
   }
@@ -123,24 +132,25 @@ public class SuperArray
   //main method for testing
   public static void main( String[] args )
   {
-      SuperArray curtis = new SuperArray();
-      System.out.println( "Printing empty SuperArray curtis..." );
-      System.out.println( curtis );
+    SuperArray curtis = new SuperArray();
+    System.out.println( "Printing empty SuperArray curtis..." );
+    System.out.println( curtis );
 
-      for( int i = 0; i < curtis._data.length; i++ ) {
-      curtis.set( i, i * 2 );
-      }
+    for( int i = 0; i < curtis._data.length; i++ ) {
+    curtis.set( i, i * 2 );
+    }
 
-      System.out.println("Printing populated SuperArray curtis...");
-      System.out.println(curtis);
+    System.out.println("Printing populated SuperArray curtis...");
+    System.out.println(curtis);
 
-      for( int i = 0; i < 3; i++ ) {
-      curtis.expand();
-      System.out.println("Printing expanded SuperArray curtis...");
-      System.out.println(curtis);
-      System.out.println("new length of underlying array: "
-      + curtis._data.length );
-      }
+    for( int i = 0; i < 3; i++ ) {
+    curtis.expand();
+    for( int b = 0; b < curtis._size; b++ ) {
+    curtis.set( b, (int)(Math.random()*100) );
+    }
+    System.out.println("Printing expanded SuperArray curtis...");
+    System.out.println(curtis);
+    }
 
       SuperArray mayfield = new SuperArray();
       System.out.println("Printing empty SuperArray mayfield...");
