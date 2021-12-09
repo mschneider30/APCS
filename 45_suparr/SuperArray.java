@@ -23,7 +23,7 @@
  How much less inefficient is a deep copy?
  ***************************/
 
-public class SuperArray
+public class SuperArray implements ListInt
 {
 
   private int[] _data;  //underlying container
@@ -81,23 +81,27 @@ public class SuperArray
   {
     int answer = get(index);
     this._data[index]=newVal;
+    if (index > this._size) {
+      this._size++;
+    }
     return answer;
   }
 
 
   //adds an item after the last item
-  public void add( int newVal )
+  public boolean add( int newVal )
   {
     if (this._size == this._data.length) {
       expand();
     }
     this._data[this._size]=newVal;
-    this._size=this.size();
+    this._size++;
+    return true;
   }
 
 
   //inserts an item at index
-  public void add( int index, int newVal )
+  public boolean add( int index, int newVal )
   {
     if (this._size >= this._data.length) {
       expand();
@@ -106,8 +110,8 @@ public class SuperArray
       this._data[i]=this._data[i-1];
     }
     this._data[index]=newVal;
-    this._size++y
-;
+    this._size++;
+    return true;
   }
 
 
@@ -119,7 +123,7 @@ public class SuperArray
       this._data[i]=this._data[i+1];
     }
     this._data[this._size-1]=0;
-    this._size=--;
+    this._size--;
   }
 
 
