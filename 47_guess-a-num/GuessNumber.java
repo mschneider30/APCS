@@ -46,7 +46,7 @@ public class GuessNumber
     _lo = Math.min(a,b);
     _hi = Math.max(a,b);
     _guessCtr = 1;
-	_target =(int)( (_hi-_lo + 1)*(Math.random())+_lo)
+	_target =(int)( (_hi-_lo + 1)*(Math.random())+_lo);
   }
 
 
@@ -60,9 +60,19 @@ public class GuessNumber
     int guess = sc.nextInt();
 	if (guess == _target) {
 		System.out.println("Correct! It took " + _guessCtr + " guesses");
+		return;
 		}
 	if (guess < _target) {
-		_
+		System.out.println("Too Low!");
+		_lo = guess +1;
+		_guessCtr++;
+		playRec();
+	}else {
+		System.out.println("Too High!");
+		_hi = guess -1;
+		_guessCtr++;
+		playRec();
+	}
     //3 cases: we either found it, too hi, too lo
 
     /* YOUR CODE HERE */
@@ -95,21 +105,19 @@ public class GuessNumber
   public void play()
   {
     //use one or the other below:
-    //playRec();
-    playIter();
+    playRec();
+   // playIter();
   }
 
 
   //main method to run it all
   public static void main( String[] args )
   {
-    /*-----------------------------
-    //instantiate a new game
+     //instantiate a new game
     GuessNumber g = new GuessNumber(1,100);
 
     //start the game
     g.play();
-    -----------------------------*/
   }
 
 }//end class GuessNumber
