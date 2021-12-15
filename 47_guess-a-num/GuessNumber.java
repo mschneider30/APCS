@@ -37,7 +37,7 @@ public class GuessNumber
 
   /*==================================================
     constructor -- initializes a guess-a-number game
-    pre:  
+    pre:
     post: _lo is lower bound, _hi is upper bound,
     _guessCtr is 1, _target is random int on range [_lo,_hi]
     ==================================================*/
@@ -94,7 +94,17 @@ public class GuessNumber
 
       //3 cases: we either found it, too hi, too lo
 
-      /* YOUR CODE HERE */
+      if (guess == _target) {
+    		System.out.println("Correct! It took " + _guessCtr + " guesses");
+        break;
+    		}
+    	else if (guess < _target) {
+    		System.out.println("Too low, try again...");
+    		_lo = guess +1;
+    	}else {
+    		System.out.println("Too high, try again...");
+    		_hi = guess -1;
+    	}
 
       _guessCtr++;
     }
@@ -105,8 +115,8 @@ public class GuessNumber
   public void play()
   {
     //use one or the other below:
-    playRec();
-   // playIter();
+    //playRec();
+    playIter();
   }
 
 
