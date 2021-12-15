@@ -1,8 +1,8 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
-// HW47 -- ?
-// 2021-12-15w
-// time spent: _ hrs
+// Blue Steaks: Max Schneider, Faiyaz Rafee, David Deng
+// APCS pd7
+// HW47 -- Guess Again / Using Return, Break to Write a Simple Game
+// 2021-12-15
+// time spent: 0.3 hrs
 
 /***
  * class GuessNumber -- fun fun fun!
@@ -21,9 +21,11 @@
 
 /***
     DISCO:
+    The break keyword exits a loop.
+    The return keyword exits a method invocation.
 
     QCC:
-
+    No unresolved questions.
  ***/
 import java.util.Scanner;
 
@@ -46,7 +48,8 @@ public class GuessNumber
     _lo = Math.min(a,b);
     _hi = Math.max(a,b);
     _guessCtr = 1;
-	_target =(int)( (_hi-_lo + 1)*(Math.random())+_lo);
+    //adding 1 to range includes hi
+	_target =(int) ((_hi-_lo + 1) * Math.random()) + _lo;
   }
 
 
@@ -58,16 +61,20 @@ public class GuessNumber
   {
     System.out.print("Guess a num bt " + _lo + " & " + _hi + ": ");
     int guess = sc.nextInt();
+    //if guess equal to target, inform user that guess was right and exit method
 	if (guess == _target) {
 		System.out.println("Correct! It took " + _guessCtr + " guesses");
 		return;
-		}
+	}
+    //if guess less than target, inform user that guess was too low, set low end to be guess + 1, increment guessCtr and ask user to guess again
 	if (guess < _target) {
 		System.out.println("Too Low!");
 		_lo = guess +1;
 		_guessCtr++;
 		playRec();
-	}else {
+	}
+    //last case (guess greater than target), inform user that guess was too high, set high end to be guess - 1, increment guessCtr and ask user to guess again
+    else {
 		System.out.println("Too High!");
 		_hi = guess -1;
 		_guessCtr++;
@@ -88,24 +95,29 @@ public class GuessNumber
 
     int guess;
 
+    //while guess is not equal to target
     while( true ) {
       System.out.print("Guess a num bt " + _lo + " & " + _hi + ": ");
       guess = sc.nextInt();
 
       //3 cases: we either found it, too hi, too lo
 
+      //if guess is equal to target, inform user that guess was right and break out of while loop
       if (guess == _target) {
     		System.out.println("Correct! It took " + _guessCtr + " guesses");
-        break;
-    		}
-    	else if (guess < _target) {
+            break;
+      }
+      //if guess is less than target, inform user that guess was too low and set low end to be guess + 1
+      else if (guess < _target) {
     		System.out.println("Too low, try again...");
     		_lo = guess +1;
-    	}else {
+      }
+      //if guess is greater than target, inform user that guess was too high and set high end to be guess - 1
+      else {
     		System.out.println("Too high, try again...");
     		_hi = guess -1;
-    	}
-
+      }
+      //increment guessCtr after each guess
       _guessCtr++;
     }
   }
