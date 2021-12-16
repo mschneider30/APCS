@@ -1,5 +1,6 @@
 /**
-   class BinSearch
+  Blue Steaks - Max Schneider
+  12/16/21
    Binary search on array of Comparables
 **/
 
