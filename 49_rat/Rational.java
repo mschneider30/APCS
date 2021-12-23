@@ -1,4 +1,4 @@
-public class Rational {
+public class Rational implements Comparable{
   private int numerator;
   private int denominator;
 
@@ -58,35 +58,15 @@ public class Rational {
 
   public int compareTo (Object r) {
     if (!( r instanceof Rational)) {
-      System.out.println("Haha loser");
-      return 0;
+      throw new Error();
     }
     Rational dummy = new Rational(this.numerator, this.denominator);
     dummy.subtract((Rational)r);
     return dummy.numerator;
   }
 
-  public static void main(String[] args) {
-   Rational r1 = new Rational(1,2);
-   Rational r2 = new Rational(3,2);
-
-   r1.add(r2);
-   System.out.println("1/2 + 3/2 = 8/4: " + r1);
-
-   System.out.println("GCD of 8 and 4 = 4: "+ r1.GCD());
-
-   r1.reduce();
-   System.out.println("8/4 = 2/1: "+r1);
-
-   r1.subtract(r2);
-   System.out.println("2/1 - 3/2 = 1/2: " + r1);
-
-   Rational r3 = new Rational(1,4);
-   Rational r4 = new Rational(2,4);
-   Rational r5 = new Rational(3,4);
-
-   System.out.println("1/2 > 1/4 yields 2: " + r1.compareTo(r3));
-   System.out.println("1/2 = 2/4 yields 0: " + r1.compareTo(r4));
-   System.out.println("1/2 < 3/4 yields -2: " + r1.compareTo(r5));
+  public boolean equals(Object r) {
+    return (compareTo(r) == 0);
   }
+
 }
