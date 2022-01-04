@@ -1,8 +1,8 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
-// HW51 -- implementing bubblesort
-// 2022-01-04t
-// time spent:  hrs
+// Blue Steaks: Max Schneider, Faiyaz Rafee, David Deng
+// APCS pd7
+// HW51 -- Dat Bubbly Tho / implementing bubblesort
+// 2022-01-04
+// time spent: 0.5 hrs
 
 /******************************
  * class BubbleSort -- implements bubblesort algorithm (vanilla)
@@ -60,14 +60,20 @@ public class BubbleSort
   // postcondition: data's elements sorted in ascending order
   public static void bubbleSortV( ArrayList<Comparable> data )
   {
+    //tracks start index of "confirmed" set (aka # of passes)
     for(int x = 0; x < data.size()-1; x ++) {
+      //variable that declares ArrayList length
       int y = data.size();
+      //iterates through the array until it reaches the "confirmed" numbers
       while (y > (x+1)) {
+        //if value at index is less than value at index directly before
         if (data.get(y-1).compareTo(data.get(y-2)) < 0) {
+          //swap values
           Comparable dummy = data.get(y-1);
           data.set(y-1, data.get(y-2));
           data.set(y-2, dummy);
         }
+        //decrement bubble by an index
         y--;
       }
     }
@@ -79,7 +85,9 @@ public class BubbleSort
   //                Returns sorted copy of input ArrayList.
   public static ArrayList<Comparable> bubbleSort( ArrayList<Comparable> input )
   {
+    //initializes dummy ArrayList as a copy of input ArrayList
     ArrayList dummy = input;
+    //sorts dummy ArrayList
     bubbleSortV(dummy);
     return dummy;
   }
@@ -123,7 +131,6 @@ public class BubbleSort
       System.out.println( "sorted version of ArrayList coco:\n"
       + cocoSorted );
       System.out.println( "ArrayList coco after sorting:\n" + coco );
-      System.out.println( coco );
       
 
   }//end main
