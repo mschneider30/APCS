@@ -16,4 +16,9 @@
      return false;
 
    }
+  public static void main(String[] args) {
+   System.out.println(GroupSum(0,[2,4,8], 10));
+   System.out.println(GroupSum(0,[2,4,8], 14));
+   System.out.println(GroupSum(0,[2,4,8], 9));
+  }
  }
