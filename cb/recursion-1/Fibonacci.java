@@ -1,5 +1,10 @@
+// Standard Valentine Configuration: Orion Roven, Max Schneider
+// APCS period 8
+// 2022-2-15
+// time elapsed: _hrs
+
 public class Fibonacci {
-    public int fibonacci (int n) {
+    public static int fibonacci (int n) {
       if (n == 0) {
         return 0;
       }

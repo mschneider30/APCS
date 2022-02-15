@@ -1,5 +1,10 @@
-public class BunnyEars {
-  public int bunnyEars2(int bunnies) {
+// Standard Valentine Configuration: Orion Roven, Max Schneider
+// APCS period 8
+// 2022-2-15
+// time elapsed: _hrs
+
+public class BunnyEars2 {
+  public static int bunnyEars2(int bunnies) {
     if (bunnies == 0) {
       return 0;
     }
