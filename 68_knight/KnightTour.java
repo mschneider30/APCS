@@ -1,8 +1,8 @@
-// Clyde Sinclair
-// APCS pd0
+// Standard Duo Configuration| Nakib Abedin, Orion Roven, Max Schneider
+// APCS pd07
 // HW68 -- recursively probing for a closed cycle
-// 2022-02-28m
-// time spent:  hrs
+// 2022-03-02w
+// time spent: 2.0 hrs
 
 /***
  * SKELETON
@@ -14,17 +14,27 @@
  * $ java KnightTour
  * $ java KnightTour [N]
  *
- * ALGO
+ * ALGO:
+ * Step 1: Place a knight in the most upperleft square.
+ * Step 2: Place another knight an “L” away according to the order. If impossible, place in next location of order
+ * Step 3: If the end of order is reached with no plays, go back one step and go down the order by one.
+ * Step 4: If you go all the way back to the beginning, place the first knight in the next square to the right until you reach the end of the board.
  *
- * DISCO
+ * DISCO:
+ * 1) Backtracking has an extremely slow runtime. Even n=6 takes a while to run completely.
+ * 2) There is a difference between Depth-spaced recursion and Breadth-spaced recursion. Depth-spaced tries one of them at a time all the way to the end whereas breadth-spaced tries them all at a time.
  *
- * QCC
+ *
+ * QCC:
+ * 1) Can you complete a knight's tour for all n x n sized board where n > 4?
+ *
+ *
  *
  * Mean execution times for boards of size n*n:
- * n=5   __s    across __ executions
+ * n=5   1.714s    across 1 execution
  * n=6   __s    across __ executions
  * n=7   __s    across __ executions
- * n=8   __s    across __ executions
+ * n=8   _789.13s    across __ executions
  *
  * POSIX PROTIP: to measure execution time from BASH, use time program:
  * $ time java KnightTour 5
