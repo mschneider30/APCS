@@ -8,27 +8,24 @@ State your cleanest algo for finding your way out of a maze (of the “2D” sty
 
 
 Mean execution times for boards of size n*n:
-n=5   0.144s    across 5 executions
-n=6   0.157s    across 5 executions
-n=7   0.308s    across 5 executions
-n=8   0.334s    across 5 executions
+n=5   3s    across 1 executions
+n=6   30s    across 1 executions
+n=7   250s    across 1 executions
+n=8   789s    across 1 executions
 
 
-q0. No it cannot, in my testing it is not possible. Our tests consisted of 25 different starting locations for a 5*5 board. We never got a open tour in those 25 tries.
+q0. No, the corners would not work because you would need to exit and enter them twice.
 
-q1. Also no, because there is not a solution at each start. But on a given start location that leads to a true knights tour, the tour will be a closed tour.
+q1. Yes, but only if the corners are kept open so you can return to them
 
-q2. There are just so many more possibilites (more branches) from each already existing branch because more of the 8 possible moves around each knight spot. It grows exponentionally, for example a 8*8 takes less than a second on my computer.
-Whereas a 9*9 takes more than 13 minutes (how much longer I have no idea because I cut it off after 13 minutes because I needed to use the terminal)
+q2. For evey additional size increase you are adding n+n-1 more knights, so it has to probe a lot more.
 
-q3. I'm not sure how we would optimize this algorithm. Maybe one could be where we check how many possiblities are available instead of trying each possiblity and then comparing that to how many moves a true tour would take.
-For example on 3*3 board, starting at the left corner (0,0), we could check that there are only two possiblities and each of those possiblities has only 1 possiblity, and each of those possiblities has 1 possibility, until we find that "oh there are only 8 possibilites instead of 9, so we stop probing.
+q3. We could have it avoid the corner exit and entrance squares since that often breaks the algorithm
 
-Or maybe, we can chose to move the knight to the space that has the least possible number of moves - for example, the knight is on space X. space a has 4 possible moves from it, while space b only has 1. we move to space b and continue our algo. Maybe this will result in a faster solving?
 
 Cleanest algo:
 
-Always turn right, if we can't, go straight, otherwise turn left.
+Always turn right, if we can't, go straight until we can, if we reach a corner turn left until we can go up.
 
 
 
