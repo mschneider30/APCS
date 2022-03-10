@@ -10,16 +10,17 @@
  *
  * 1. Summary of QuickSort algorithm:
  * QSort(arr):
+      
  *
  * 2a. Worst pivot choice and associated run time:
  *
  * 2b. Best pivot choice and associated run time:
- *      
+ *
  * 3. Approach to handling duplicate values in array:
  *    consistently view as smaller
  **/
 
-public class QuickSort
+public class QuickSelect
 {
   //--------------v  HELPER METHODS  v--------------
   //swap values at indices x, y in array o
@@ -67,14 +68,16 @@ public class QuickSort
    * void qsort(int[])
    * @param d -- array of ints to be sorted in place
    */
-  public static void qsort( int[] d )
+  public static int qselect( int[] d, int n )
   {
     qsorthelper(0,d.length -1 ,d);
+    int res = d[(n-1)];
+    return res;
   }
 
   //you may need a helper method...
   public static void qsorthelper (int low, int high, int[] arr) {
-    if (low < high) {
+    if (low <= high) {
       int pivpoint = Partition.partition(arr, low, high, low);
       qsorthelper(low,pivpoint-1,arr);
       qsorthelper(pivpoint+1,high,arr);
@@ -87,6 +90,37 @@ public class QuickSort
   public static void main( String[] args )
   {
 
+    int[] arr1 = {8,21,17,69,343};
+    int[] arr3 = {1,28,33,4982,37};
+    int[] arr4 = {17,4,5,9000,6};
+    int[] arr5 = {3,0,16,599,1024};
+    int[] arr6 = {7,1,5,12,3};
+    int[] arr7 = {900, 800 , 700, 600 , 500};
+    int[] arr8 = {2};
+
+    System.out.println(" third smallest arr1; ");
+    printArr(arr1);
+    System.out.println(""+qselect(arr1,3));
+    System.out.println("-----------------------");
+
+    System.out.println(" second smallest arr3; ");
+    printArr(arr3);
+    System.out.println(""+qselect(arr3,2));
+    System.out.println("-----------------------");
+
+    System.out.println(" first smallest arr4; ");
+    printArr(arr4);
+    System.out.println(""+qselect(arr4,1));
+    System.out.println("-----------------------");
+
+    System.out.println(" fifth smallest arr5; ");
+    printArr(arr5);
+    System.out.println(""+qselect(arr5,5));
+    System.out.println("-----------------------");
+
+
+
+/*
     //get-it-up-and-running, static test case:
     int [] arr1 = {7,1,5,12,3};
     System.out.println("\narr1 init'd to: " );
