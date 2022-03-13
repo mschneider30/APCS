@@ -7,23 +7,27 @@
 public class LLNode
 {
   //instance vars
+  private String car;
+  private LLNode cdr;
+
 
   // constructor
   public LLNode( String value, LLNode next )
   {
-
+    car = value;
+    cdr = next;
   }
 
 
   //--------------v  ACCESSORS  v--------------
   public String getCargo()
   {
-
+    return car;
   }
 
   public LLNode getNext()
   {
-
+    return cdr;
   }
   //--------------^  ACCESSORS  ^--------------
 
@@ -31,12 +35,16 @@ public class LLNode
   //--------------v  MUTATORS  v--------------
   public String setCargo( String newCargo )
   {
-
+    String oldCargo = car;
+    car = newCargo;
+    return oldCargo;
   }
 
   public LLNode setNext( LLNode newNext )
   {
-
+    LLNode oldNext = cdr;
+    cdr = newNext;
+    return oldNext;
   }
   //--------------^  MUTATORS  ^--------------
 
@@ -44,7 +52,11 @@ public class LLNode
   // override inherited toString
   public String toString()
   {
-
+    if (cdr == null) {
+      return car;
+    } else {
+      return car + " > " +  cdr.toString();
+    }
   }
 
 
@@ -63,12 +75,12 @@ public class LLNode
     //Create a third node after the second
     first.getNext().setNext( new LLNode( "cow", null ) );
 
-    /* A naive list traversal, has side effects.... ??
+
        while( first != null ) {
-       System.out.println( first );
-       first = first.getNext();
+         System.out.println( first );
+         first = first.getNext();
        }
-    */
+
 
     //Q: when head ptr moves to next node in list, what happens to the node it just left?
 
@@ -80,4 +92,3 @@ public class LLNode
   }//end main
 
 }//end class LLNode
-
