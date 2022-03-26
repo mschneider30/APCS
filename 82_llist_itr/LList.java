@@ -154,7 +154,7 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable"
   //return an Iterator over this list
    public Iterator<T> iterator()
    {
-     Iterator<T> itr = this.iterator();
+     MyIterator itr = new MyIterator(this);
      return itr;
    }
 
@@ -253,9 +253,9 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable"
     private boolean _okToRemove; // flag indicates next() was called
 
     //constructor
-    public MyIterator()
+    public MyIterator(LList ref)
     {
-
+      _dummy = ref._head;
     }
 
     //-----------------------------------------------------------
@@ -271,6 +271,9 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable"
     public T next()
     {
       _okToRemove = true;
+      T returner =  _dummy.getNext().getCargo();
+      _dummy = _dummy.getNext();
+      return returner;
 
     }
 
@@ -280,7 +283,10 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable"
     //               (...so that hasNext() will not crash)
     public void remove()
     {
-            /* YOUR CODE HERE */
+      if (_okToRemove) {
+        _dummy.setPrev(_dummy.getPrev().getPrev());
+      }
+      _okToRemove = false;
     }
     //--------------^  Iterator interface methods  ^-------------
     //-----------------------------------------------------------
