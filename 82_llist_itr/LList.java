@@ -1,4 +1,17 @@
 /***
+Max Schneider, Perry Huang, Oscar Breen
+APCS
+HW<nn> -- <Roll Your Own Iterator/ AUgmenting Linked list to make it iterable
+2022-03-28
+time spent: 0.5
+
+DISCO:
+	The distinciton between getNext and getCargo is important, paired in most case
+	_dummy is very useful
+	classes can exist inside other classes
+QCC
+	should we use this class in class setup?
+
  * class LList v6
  * Implements a linked list of DLLNodes.
  * Version 06 is iterable via FOREACH loop
@@ -290,14 +303,13 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable"
     }
     //--------------^  Iterator interface methods  ^-------------
     //-----------------------------------------------------------
-  }//*************** end inner class MyIterator ***************
+  }//*************** end inner class MyIterator ***************/
 
 
 
   //main method for testing
   public static void main( String[] args )
   {
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     LList james = new LList();
 
     System.out.println("initially: " );
@@ -340,7 +352,6 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable"
 
     System.out.println( "...after remove(0): " + james.remove(0) );
     System.out.println( james + "\tsize: " + james.size() );
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main()
 
 }//end class LList
