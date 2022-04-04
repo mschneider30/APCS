@@ -1,3 +1,20 @@
+/*Max Schneider, Oscar Breen, Perry Huang
+APCS
+HW87 -- <The English Do Not Wait In Line for Soup /Queue/Making a queue, remove>
+2022-04-03
+time spent: 2
+
+DISCO:
+        -  Nodes are maleable
+        -  assigning and maintaining the values of a first and last makes
+           many methods a lot easier
+
+QCC;
+    - Why not Double linked Nodes?
+*/
+
+
+
 /***
  * interface Queue
  * Includes only methods listed in AP subset of Java
