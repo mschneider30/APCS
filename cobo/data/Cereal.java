@@ -80,21 +80,37 @@ public   double getRating() {
   return Rating;
 }
 public String toString() {
-  System.out.println("Name: " + Name);
-  System.out.println("Type: " + Type);
-  System.out.println("Calories: " + Calories);
-  System.out.println("Protein: " + Protein);
-  System.out.println("Fat: " + Fat);
-  System.out.println("Sodium: " + Sodium);
-  System.out.println("Fiber: " + Fiber);
-  System.out.println("Carbohydrates: " + Carbohydrates);
-  System.out.println("Sugar: " + Sugar);
-  System.out.println("Potassium: " + Potassium);
-  System.out.println("Vitamins: " + Vitamins);
-  System.out.println("Shelf: " + Shelf);
-  System.out.println("Weight: " + Weight);
-  System.out.println("Cups: " + Cups);
-  System.out.println("Rating: " + Rating);
+  String retVal = "";
+  retVal+=("Name: " + Name);
+  retVal+="\n";
+  retVal+=("Type: " + Type);
+  retVal+="\n";
+  retVal+=("Calories: " + Calories);
+  retVal+="\n";
+  retVal+=("Protein: " + Protein);
+  retVal+="\n";
+  retVal+=("Fat: " + Fat);
+  retVal+="\n";
+  retVal+=("Sodium: " + Sodium);
+  retVal+="\n";
+  retVal+=("Fiber: " + Fiber);
+  retVal+="\n";
+  retVal+=("Carbohydrates: " + Carbohydrates);
+  retVal+="\n";
+  retVal+=("Sugar: " + Sugar);
+  retVal+="\n";
+  retVal+=("Potassium: " + Potassium);
+  retVal+="\n";
+  retVal+=("Vitamins: " + Vitamins);
+  retVal+="\n";
+  retVal+=("Shelf: " + Shelf);
+  retVal+="\n";
+  retVal+=("Weight: " + Weight);
+  retVal+="\n";
+  retVal+=("Cups: " + Cups);
+  retVal+="\n";
+  retVal+=("Rating: " + Rating);
+  return retVal;
 }
 public static void main (String[] args) {
   Cereal Bran = new Cereal("100% Bran", 'C', 70, 4, 1, 130, 10, 5, 6, 280, 25, 3, 1, 0.33, 68.402973);
