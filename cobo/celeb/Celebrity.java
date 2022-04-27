@@ -1,3 +1,4 @@
+
 /**
  * Celebrity base class for the Celebrity game.
  * @author cody.henrichsen
@@ -9,7 +10,7 @@ public class Celebrity
 	 * The clue to determine the celebrity
 	 */
 	public String _clue;
-	
+
 	/**
 	 * The answer or name of the celebrity.
 	 */
@@ -59,9 +60,9 @@ public class Celebrity
 	 */
 	public void setAnswer(String answer)
 	{
-		_answer = answer;		
+		_answer = answer;
 	}
-	
+
 	/**
 	 * Provides a String representation of the Celebrity.
 	 */
@@ -70,5 +71,5 @@ public class Celebrity
 	{
 		return _answer + ": " + _clue;
 	}
-	
+
 }

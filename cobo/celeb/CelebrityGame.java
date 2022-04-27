@@ -1,8 +1,9 @@
+
 import java.util.ArrayList;
 
 /**
  * The framework for the Celebrity Game project
- * 
+ *
  * @author cody.henrichsen
  * @version 2.3 25/09/2018 refactored the prepareGame and play methods
  */
@@ -11,7 +12,6 @@ public class CelebrityGame
 	/**
 	 * A reference to a Celebrity or subclass instance.
 	 */
-	public Celebrity answer;
 
 	/**
 	 * The GUI frame for the Celebrity game.
@@ -21,12 +21,17 @@ public class CelebrityGame
 	 * The ArrayList of Celebrity values that make up the game
 	 */
 	public ArrayList<Celebrity> celebGameList;
+	public Celebrity gameCelebrity;
+	public CelebrityFrame gameWindow;
 	/**
 	 * Builds the game and starts the GUI
 	 */
 	public CelebrityGame()
 	{
-	
+		celebGameList = new ArrayList<Celebrity>();
+		gameWindow = new CelebrityFrame(this);
+		this.prepareGame();
+		this.play();
 
 	}
 
@@ -35,14 +40,15 @@ public class CelebrityGame
 	 */
 	public void prepareGame()
 	{
-		
+
 		celebGameList = new ArrayList<Celebrity>();
+		gameWindow.replaceScreen("START");
 
 	}
 
 	/**
 	 * Determines if the supplied guess is correct.
-	 * 
+	 *
 	 * @param guess
 	 *            The supplied String
 	 * @return Whether it matches regardless of case or extraneous external
@@ -50,7 +56,7 @@ public class CelebrityGame
 	 */
 	public boolean processGuess(String guess)
 	{
-		if (guess.equals(answer.getAnswer())) {
+		if (guess.equals(gameCelebrity.getAnswer())) {
 			return true;
 		}
 		return false;
@@ -63,14 +69,17 @@ public class CelebrityGame
 	 */
 	public void play()
 	{
-	
-		answer = celebGameList.get(0);
-		celebGameList.remove(0);
+
+		if (celebGameList != null && celebGameList.size() > 0L )
+		{
+				this.gameCelebrity = celebGameList.get(0);
+				gameWindow.replaceScreen("GAME");
+			}
 	}
 
 	/**
 	 * Adds a Celebrity of specified type to the game list
-	 * 
+	 *
 	 * @param name
 	 *            The name of the celebrity
 	 * @param guess
@@ -90,24 +99,24 @@ public class CelebrityGame
 	 */
 	public boolean validateCelebrity(String name)
 	{
-		return answer.getAnswer().length() > 4;
+		return gameCelebrity.getAnswer().length() > 4;
 	}
 
 	/**
 	 * Checks that the supplied clue has at least 10 characters or is a series of clues
 	 * This method would be expanded based on your subclass of Celebrity.
 	 * @param clue The text of the clue(s)
-	 * @param type Supports a subclass of Celebrity 
+	 * @param type Supports a subclass of Celebrity
 	 * @return If the clue is valid.
 	 */
 	public boolean validateClue(String clue, String type)
 	{
-		return answer.getClue().length() > 10;
+		return gameCelebrity.getClue().length() > 10;
 	}
 
 	/**
 	 * Accessor method for the current size of the list of celebrities
-	 * 
+	 *
 	 * @return Remaining number of celebrities
 	 */
 	public int getCelebrityGameSize()
@@ -118,22 +127,22 @@ public class CelebrityGame
 	/**
 	 * Accessor method for the games clue to maintain low coupling between
 	 * classes
-	 * 
+	 *
 	 * @return The String clue from the current celebrity.
 	 */
 	public String sendClue()
 	{
-		return answer.getClue();
+		return gameCelebrity.getClue();
 	}
 
 	/**
 	 * Accessor method for the games answer to maintain low coupling between
 	 * classes
-	 * 
+	 *
 	 * @return The String answer from the current celebrity.
 	 */
 	public String sendAnswer()
 	{
-		return answer.getAnswer();
+		return gameCelebrity.getAnswer();
 	}
 }
